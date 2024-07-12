@@ -59,38 +59,35 @@ export default function NavBar() {
         <NavLinks
           to={"/"}
           label={"Home"}
-          icon={
+          icon={({ className }) => (
             <Browser
               size={22}
               weight="light"
-              color="#F7861D"
-              className="hover:text-black"
+              className={`${className} hover:text-black`}
             />
-          }
+          )}
         />
         <NavLinks
           to={"/"}
           label={"Work"}
-          icon={
+          icon={({ className }) => (
             <BracketsCurly
               size={22}
               weight="light"
-              color="#F7861D"
-              className="hover:text-black"
+              className={`${className} hover:text-black`}
             />
-          }
+          )}
         />
         <NavLinks
           to={"/"}
           label={"Contact"}
-          icon={
+          icon={({ className }) => (
             <At
               size={22}
               weight="light"
-              color="#F7861D"
-              className="hover:text-black"
+              className={`${className} hover:text-black`}
             />
-          }
+          )}
         />
       </div>
     </nav>

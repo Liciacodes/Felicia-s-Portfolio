@@ -26,7 +26,7 @@ function Projects() {
             </div>
 
             <div className="flex flex-col w-[466px] h-[291px]">
-              <h3 className="text-[28px] text-black font-medium mb-3 leading-[32.92px]">
+              <h3 className="text-[28px]  w-[476px] text-black font-medium mb-3 leading-[32.92px]">
                 {project.title}
               </h3>
               <p className="text-black mb-6">{project.description}</p>
