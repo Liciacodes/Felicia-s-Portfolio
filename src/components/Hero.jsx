@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Button from "./Button";
+import checked from "../assets/checkedCircle.png";
 import {
   Barcode,
   EnvelopeSimple,
@@ -51,7 +52,10 @@ export default function Hero() {
             <span>Copy Email</span>
             <span>
               {isCopied ? (
-                <CheckCircle size={22} weight="light" color="green" />
+                <div className="">
+                  <img src={checked} alt="" srcset="" />
+                  {/* <CheckCircle size={22} weight="light" color="green" /> */}
+                </div>
               ) : isHovered ? (
                 <ClipboardText size={22} color="#F7861D" weight="light" />
               ) : (

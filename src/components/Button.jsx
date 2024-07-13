@@ -15,7 +15,7 @@ export default function Button({
       {...props}
     >
       <span>{label}</span>
-      <span>{icon}</span>
+      <span className="hover:text-white">{icon}</span>
     </button>
   );
 }
