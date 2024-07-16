@@ -1,13 +1,7 @@
 import React, { useState } from "react";
 import Button from "./Button";
 import checked from "../assets/checkedCircle.png";
-import {
-  Barcode,
-  EnvelopeSimple,
-  CheckCircle,
-  ClipboardText,
-} from "phosphor-react";
-import NavLinks from "./NavLinks";
+import { Barcode, EnvelopeSimple, ClipboardText } from "phosphor-react";
 
 export default function Hero() {
   const [isHovered, setIsHovered] = useState(false);
@@ -26,25 +20,26 @@ export default function Hero() {
         console.error("Failed to copy email: ", err);
       });
   };
+
   return (
-    <section className="flex flex-col my-20 md:w-[950px]">
-      <div className="">
-        <h1 className="text-[16px] md:text-[26px] font-normal text-black leading-9 md:w-[673px]  md:h-[114px] ">
+    <section className="flex flex-col w-full px-6 md:px-0 my-20 md:w-[950px]">
+      <div className="w-full max-w-4xl mx-auto">
+        <h1 className="text-[16px] md:text-[26px] font-normal text-black leading-9 md:w-[673px] md:h-[114px] ">
           👋🏽 I am Felicia, full-time Software Engineer, and part-time Olympic
           swimmer. Currently seeking for roles...
         </h1>
 
-        <div className="flex mt-6 items-center gap-x-6">
+        <div className="flex flex-col md:flex-row mt-6 md:items-center gap-x-6">
           <Button
-            label={" View Projects"}
+            label={"View Projects"}
             bgColor={"bg-black"}
             textColor={"text-white"}
             width={"w-[241px]"}
             height={"h-[54px]"}
-            icon={<Barcode size={22} weight="light" color="#F7861D" />}
+            Icon={<Barcode size={36} weight="light" />}
           />
           <button
-            className="flex items-center px-4 py-1 gap-x-2 text-[#5C5F6A] font-medium"
+            className="flex items-center justify-between md:justify-start mt-3 md:mt-0 w-full px-0 md:px-4 py-1 md:gap-x-2 text-[#5C5F6A] font-medium"
             onClick={copyToClipboard}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
@@ -52,10 +47,7 @@ export default function Hero() {
             <span>Copy Email</span>
             <span>
               {isCopied ? (
-                <div className="">
-                  <img src={checked} alt="" srcset="" />
-                  {/* <CheckCircle size={22} weight="light" color="green" /> */}
-                </div>
+                <img src={checked} alt="email" />
               ) : isHovered ? (
                 <ClipboardText size={22} color="#F7861D" weight="light" />
               ) : (

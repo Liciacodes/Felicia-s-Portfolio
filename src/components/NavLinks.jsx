@@ -5,8 +5,8 @@ export default function NavLinks({ to, icon: Icon, label, ...props }) {
     <NavLink
       to={to}
       className={({ isActive }) =>
-        `group flex items-center px-4 py-4 gap-x-2 text-[#5C5F6A] font-medium  ${
-          isActive ? " rounded-lg font-medium text-[#0E1422]" : ""
+        `group flex items-center px-4 pb-4 md:pb-0 py-0 md:py-4 gap-x-2 text-[#5C5F6A] font-medium  ${
+          isActive ? "rounded-lg font-medium text-[#0E1422]" : ""
         }`
       }
       {...props}
@@ -14,7 +14,7 @@ export default function NavLinks({ to, icon: Icon, label, ...props }) {
       <span className="group-hover:text-black transition-colors duration-300 ">
         {label}
       </span>
-      <span className="group-hover:text-black transition-colors duration-300">
+      <span className="group-hover:text-black transition-colors duration-300 w-[22px] h-[22px]">
         <Icon className="text-[#F7861D] group-hover:text-black transition-colors duration-300" />
       </span>
     </NavLink>

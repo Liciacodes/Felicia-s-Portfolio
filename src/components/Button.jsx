@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Button({
   label,
-  icon,
+  Icon,
   bgColor,
   textColor,
   width,
@@ -11,11 +11,16 @@ export default function Button({
 }) {
   return (
     <button
-      className={`${bgColor} ${textColor} ${width} ${height} flex items-center gap-x-4 px-[22px] py-[18px] font-normal text-[18px]`}
+      className={`group ${bgColor} ${textColor} ${width} ${height} hover:bg-gradient-to-r from-[#000000] w-full md:w-[241px] md:h-[54px] to-[#613309] flex items-center justify-between md:justify-start md:gap-x-4 px-[22px] py-[18px] font-normal text-[18px]`}
       {...props}
     >
-      <span>{label}</span>
-      <span className="hover:text-white">{icon}</span>
+      <span className="transition-colors duration-300 flex-grow">{label}</span>
+      <span className="transition-colors duration-300">
+        {React.cloneElement(Icon, {
+          className:
+            "text-[#F7861D] group-hover:text-white transition-colors duration-300",
+        })}
+      </span>
     </button>
   );
 }

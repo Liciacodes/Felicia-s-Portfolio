@@ -5,9 +5,9 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="flex flex-col mt-40  md:w-[950px] mb-20 text-black"
+      className="flex flex-col mt-14 md:mt-40 px-6 md:px-0 w-full md:w-[950px] mb-20 text-black"
     >
-      <div className="block">
+      <div className="block w-full max-w-4xl mx-auto">
         <h2 className="text-xl border-l-[3px]  border-[#F7861D] pl-2 text-[18px] font-normal mb-4 text-black leading-[22.79px]">
           Say Hello
         </h2>
