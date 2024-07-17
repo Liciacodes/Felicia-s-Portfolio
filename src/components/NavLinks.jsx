@@ -1,12 +1,18 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-export default function NavLinks({ to, icon: Icon, label, ...props }) {
+export default function NavLinks({
+  to,
+  icon: Icon,
+  label,
+  className,
+  ...props
+}) {
   return (
     <NavLink
       to={to}
       className={({ isActive }) =>
         `group flex items-center px-4 pb-4 md:pb-0 py-0 md:py-4 gap-x-2 text-[#5C5F6A] font-medium  ${
-          isActive ? "rounded-lg font-medium text-[#0E1422]" : ""
+          isActive ? "rounded-lg font-medium text-[#F7861D]" : "text-black"
         }`
       }
       {...props}

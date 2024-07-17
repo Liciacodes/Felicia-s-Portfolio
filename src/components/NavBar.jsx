@@ -68,7 +68,7 @@ export default function NavBar() {
           )}
         />
         <NavLinks
-          to={"/"}
+          to={"/projects"}
           label={"Work"}
           icon={({ className }) => (
             <BracketsCurly
@@ -79,7 +79,7 @@ export default function NavBar() {
           )}
         />
         <NavLinks
-          to={"/"}
+          to={"/contact"}
           label={"Contact"}
           icon={({ className }) => (
             <At
