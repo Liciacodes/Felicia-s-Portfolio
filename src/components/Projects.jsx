@@ -26,11 +26,8 @@ function Projects() {
                     className="w-full object-cover"
                   />
                 </div>
-                <Link to={project.link}>
-                  <button
-                    formTarget="_blank"
-                    className="mt-10 bg-black text-white text-sm py-[18px] px-[20px] w-full bg-gradient-to-r from-[#000000] to-[#613309]"
-                  >
+                <Link to={project.link} target="_blank">
+                  <button className="mt-10 bg-black text-white text-sm py-[18px] px-[20px] w-full bg-gradient-to-r from-[#000000] to-[#613309]">
                     View Live Link*
                   </button>
                 </Link>
@@ -40,7 +37,7 @@ function Projects() {
               </p>
             </div>
 
-            <div className="flex flex-col w-full md:w-[466px] h-auto md:h-[291px]  md:mt-0">
+            <div className="flex flex-col w-full md:w-[450px] h-auto md:h-[291px]  md:mt-0">
               <h3 className="text-[28px] text-black font-medium mb-1 leading-[32.92px]">
                 {project.title}
               </h3>
