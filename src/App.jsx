@@ -8,14 +8,15 @@ import Contact from "./components/Contact";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/skills" element={<Skills />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </BrowserRouter>
+    <HomePage />
+    // <BrowserRouter>
+    //   <Routes>
+    //     <Route path="/" element={<HomePage />} />
+    //     <Route path="/projects" element={<Projects />} />
+    //     <Route path="/skills" element={<Skills />} />
+    //     <Route path="/contact" element={<Contact />} />
+    //   </Routes>
+    // </BrowserRouter>
   );
 }
 

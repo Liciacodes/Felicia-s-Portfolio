@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { projects } from "../data";
-import { Link } from "react-router-dom";
 
 function Projects() {
   const [expandedDescriptions, setExpandedDescriptions] = useState({});
@@ -18,10 +17,7 @@ function Projects() {
   };
 
   return (
-    <section
-      id="work"
-      className="mt-20 flex flex-col items-center px-6 md:px-0 w-full"
-    >
+    <section className="mt-10 flex flex-col items-center px-6 md:px-0 w-full">
       <div className="w-full max-w-4xl mx-auto">
         <h2 className="border-l-4 border-[#F7861D] pl-2 text-2xl font-normal mb-4 text-black leading-[22.79px]">
           Projects ({projects.length})
@@ -40,8 +36,8 @@ function Projects() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <Link
-                  to={project.link}
+                <a
+                  href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block"
@@ -49,7 +45,7 @@ function Projects() {
                   <button className="w-full py-[18px] px-[20px] text-sm text-white bg-gradient-to-r from-[#000000] to-[#613309]">
                     View Live Link*
                   </button>
-                </Link>
+                </a>
               </div>
               <p className="text-[#B9A390] font-normal text-sm mt-2">
                 *You'll be redirected to the live preview link
@@ -80,7 +76,14 @@ function Projects() {
                 Dev Stack
               </p>
               <p className="text-black font-medium text-[18px] hidden md:block">
-                {project.technologies.join(" | ")}
+                {project.technologies.map((tech, techIndex) => (
+                  <React.Fragment key={techIndex}>
+                    {techIndex > 0 && (
+                      <span className="text-[#F7861D] mx-1 font-normal">|</span>
+                    )}
+                    <span>{tech}</span>
+                  </React.Fragment>
+                ))}
               </p>
             </div>
           </div>

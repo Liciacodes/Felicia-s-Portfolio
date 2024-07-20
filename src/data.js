@@ -1,5 +1,6 @@
 import image1 from "../src/assets/onboarding Screen.png";
 import image2 from "../src/assets/customer-order-dashboard.png";
+// import image3 from "../src/assets/e-commerce landing Page.PNG";
 
 export const projects = [
   {
@@ -27,9 +28,10 @@ export const projects = [
     image: image2,
   },
   {
-    title: "Finance Tracker",
+    title: "ECommerce Landing Page",
     description:
       "This case study examines the creation of an eco-friendly water bottle, covering the design procesuser-centered design, and environmental impact.",
     technologies: ["HTML", "CSS", "JavaScript"],
+    image: image2,
   },
 ];

@@ -22,7 +22,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="flex flex-col w-full px-6 md:px-0 my-20 md:w-[950px]">
+    <section className="flex flex-col w-full px-6 lg:w-full md:px-0 my-20 md:w-[950px]">
       <div className="w-full max-w-4xl mx-auto">
         <h1 className="text-[16px] md:text-[26px] font-normal text-black leading-9 md:w-[673px] md:h-[114px] ">
           👋🏽 I am Felicia, full-time Software Engineer, and part-time Olympic
