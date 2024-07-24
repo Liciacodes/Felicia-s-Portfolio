@@ -2,6 +2,11 @@ import React, { useState } from "react";
 import { projects } from "../data";
 
 function Projects() {
+  const Separator = () => (
+    <span className="text-[#B9A390] mx-2  h-[22px] text-sm align-middle">
+      |
+    </span>
+  );
   const [expandedDescriptions, setExpandedDescriptions] = useState({});
 
   const toggleDescription = (index) => {
@@ -72,15 +77,13 @@ function Projects() {
                 </p>
                 <p className="hidden md:block">{project.description}</p>
               </div>
-              <p className="text-[#B9A390] text-[12px] font-normal leading-[15.49px] hidden md:block">
+              <p className="text-[#B9A390] text-[12px] font-normal leading-[15.49px] mt-4 hidden md:block">
                 Dev Stack
               </p>
               <p className="text-black font-medium text-[18px] hidden md:block">
                 {project.technologies.map((tech, techIndex) => (
                   <React.Fragment key={techIndex}>
-                    {techIndex > 0 && (
-                      <span className="text-[#F7861D] mx-1 font-normal">|</span>
-                    )}
+                    {techIndex > 0 && <Separator />}
                     <span>{tech}</span>
                   </React.Fragment>
                 ))}

@@ -1,12 +1,12 @@
 import image1 from "../src/assets/onboarding Screen.png";
 import image2 from "../src/assets/customer-order-dashboard.png";
-// import image3 from "../src/assets/e-commerce landing Page.PNG";
+import image3 from "../src/assets/game.png";
 
 export const projects = [
   {
     title: "Onboarding Screen Project",
     description:
-      " This is an Onboarding Screen Project It takes you through the process of creating an account which is also know as signing up, logging in by retrieving the user's details from the database and finally having access to the dashboard. ",
+      " This is an Onboarding Screen Project It takes you through the process of creating an account which is also know as signing up ",
     technologies: ["HTML", "CSS", "JavaScript", "React Js", "Tailwind Css"],
     link: "https://feliciaonboarding-project.netlify.app/",
     image: image1,
@@ -28,10 +28,11 @@ export const projects = [
     image: image2,
   },
   {
-    title: "ECommerce Landing Page",
+    title: "Tic Tac Toe ",
     description:
-      "This case study examines the creation of an eco-friendly water bottle, covering the design procesuser-centered design, and environmental impact.",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    image: image2,
+      "A classic Tic Tac Toe game built as a web application with an intelligent twist. This interactive game allows two players to take turns marking X's and O's on a 3x3 grid, with the added feature of move suggestions to enhance gameplay.",
+    technologies: ["HTML", "CSS", "JavaScript", "Nextjs"],
+    image: image3,
+    link: "https://connect-4-clone-4j2mrh8lv-liciacodes-projects.vercel.app/",
   },
 ];
