@@ -10,10 +10,10 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="md:mt-10 mt-0 px-6 md:px-0 flex flex-col w-full md:w-[950px]"
+      className="mt-0 px-6 md:px-0 flex flex-col w-full md:w-[950px]"
     >
       <div className="block w-full max-w-4xl mx-auto">
-        <h2 className="text-xl border-l-4 border-[#F7861D] pl-2 text-[18px] font-normal mb-6 text-black leading-[22.79px]">
+        <h2 className="border-l-4 border-[#F7861D] pl-2 text-[18px] font-normal mb-6 text-black leading-[22.79px]">
           Skills
         </h2>
         <div className="text-black">
@@ -22,7 +22,7 @@ function Skills() {
               Frontend Tools
             </h3>
             <p className="font-medium text-[18px]">
-              HTML <Separator /> CSS <Separator /> JavaScript <Separator />{" "}
+              HTML <Separator /> CSS <Separator /> JavaScript <Separator />
               React <Separator /> Vue
             </p>
           </div>
