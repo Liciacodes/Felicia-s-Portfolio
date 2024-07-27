@@ -6,7 +6,7 @@ export const projects = [
   {
     title: "Onboarding Screen Project",
     description:
-      " This is an Onboarding Screen Project It takes you through the process of creating an account which is also know as signing up, logging in by retrieving the user's details from the database and finally having access to the dashboard. ",
+      " This is an Onboarding Screen Project It takes you through the process of creating an account which is also know as signing up, logging in by retrieving the user's details from the database.",
     technologies: ["HTML", "CSS", "JavaScript", "React Js", "Tailwind Css"],
     link: "https://feliciaonboarding-project.netlify.app/",
     image: image1,
@@ -27,6 +27,7 @@ export const projects = [
     link: "https://sample-dashboard-eta.vercel.app/",
     image: image2,
   },
+
   {
     title: "Tic Tac Toe Game",
     description:

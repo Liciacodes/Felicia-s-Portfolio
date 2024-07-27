@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { projects } from "../data";
+import SectionTitle from "./SectionTitle";
 
 function Projects() {
   const Separator = () => (
@@ -23,9 +24,10 @@ function Projects() {
   return (
     <section className="mt-10 flex flex-col items-center px-4 sm:px-6 lg:px-0 w-full">
       <div className="w-full max-w-4xl mx-auto">
-        <h2 className="border-l-4 border-[#F7861D] pl-2 text-2xl font-normal mb-4 text-black leading-[22.79px] inline-block">
+        <SectionTitle title={"Projects "} projectNumber={projects.length} />
+        {/* <h2 className="border-l-4 border-[#F7861D] pl-2 text-2xl font-normal mb-4 text-black leading-[22.79px] inline-block">
           Projects ({projects.length})
-        </h2>
+        </h2> */}
         {projects.map((project, index) => (
           <div
             key={index}
@@ -80,7 +82,7 @@ function Projects() {
                 </div>
                 <div className="absolute bottom-6 left-0 right-0">
                   {/* Positioned absolutely */}
-                  <p className="text-[#B9A390] text-[12px] font-normal leading-[15.49px] mt-4 hidden md:block">
+                  <p className="text-[#B9A390] text-[12px] font-normal leading-[15.49px] mt-5 hidden md:block">
                     Dev Stack
                   </p>
                   <p className="text-black font-medium text-[18px] hidden md:block">
