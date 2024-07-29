@@ -46,7 +46,7 @@ export default function Hero() {
             className="pl-0 pr-4" // Add this line to remove left padding and adjust right padding
           /> */}
           <button
-            className="flex items-center justify-between md:justify-start mt-3 md:mt-0 w-full px-0 md:px-4 py-1 md:gap-x-2 text-[#5C5F6A] font-medium"
+            className="flex items-center justify-between md:justify-start mt-3 md:mt-0 w-full px-0 md:px-4 py-1 md:gap-x-2 text-black text-[18px] font-medium"
             onClick={copyToClipboard}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}

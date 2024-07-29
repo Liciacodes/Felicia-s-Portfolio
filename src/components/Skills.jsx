@@ -3,9 +3,7 @@ import SectionTitle from "./SectionTitle";
 
 function Skills() {
   const Separator = () => (
-    <span className="text-[#B9A390] mx-1  h-[22px] text-sm align-middle">
-      |
-    </span>
+    <span className="text-[#B9A390] mx-1 text-sm align-middle">|</span>
   );
 
   return (
@@ -14,16 +12,13 @@ function Skills() {
       className="mt-0 px-6 md:px-0 flex flex-col w-full md:w-[950px]"
     >
       <div className="block w-full max-w-4xl mx-auto">
-        {/* <h2 className="border-l-4 border-[#F7861D] pl-2 text-[18px] font-normal mb-6 text-black leading-[22.79px]">
-          Skills
-        </h2> */}
         <SectionTitle title={"Skills"} />
         <div className="text-black">
           <div className="mb-5">
             <h3 className="font-normal text-[12px] text-[#B9A390]">
               Frontend Tools
             </h3>
-            <p className="font-medium text-[18px]">
+            <p className="font-medium text-[18px] leading-none">
               HTML <Separator /> CSS <Separator /> JavaScript <Separator />
               React <Separator /> Vue
             </p>
@@ -32,7 +27,7 @@ function Skills() {
             <h3 className="font-normal text-[12px] text-[#B9A390] ">
               Backend Tools
             </h3>
-            <p className="font-medium text-[18px]">
+            <p className="font-medium text-[18px] leading-none">
               Node.js <Separator /> Express.js <Separator /> MongoDB
             </p>
           </div>
@@ -41,7 +36,7 @@ function Skills() {
             <h3 className="font-normal text-[12px] text-[#B9A390] ">
               Other Tools
             </h3>
-            <p className="font-medium text-[18px]">
+            <p className="font-medium text-[18px] leading-none">
               Git <Separator /> Agile <Separator /> Teamwork
             </p>
           </div>

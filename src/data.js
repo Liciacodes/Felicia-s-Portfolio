@@ -6,28 +6,19 @@ export const projects = [
   {
     title: "Onboarding Screen Project",
     description:
-      " This is an Onboarding Screen Project It takes you through the process of creating an account which is also know as signing up, logging in by retrieving the user's details from the database.",
+      "This is an Onboarding Screen Project It takes you through the process of creating an account which is also know as signing up, logging in by retrieving the user's details from the database.",
     technologies: ["HTML", "CSS", "JavaScript", "React Js", "Tailwind Css"],
     link: "https://feliciaonboarding-project.netlify.app/",
     image: image1,
   },
-
   {
     title: "Customer and Order Dashboard",
     description:
-      "This is a responsive Customers and Order dashboard project built with Nextjs, chartjs and TailwindCSS. Data is fetched dynamically and displayed on the charts. ",
-    technologies: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Tailwindcss",
-      "React Charts",
-      ,
-    ],
+      "This is a responsive Customers and Order dashboard project built with Nextjs, chartjs and TailwindCSS. Data is fetched dynamically and displayed on the charts.",
+    technologies: ["HTML", "CSS", "JavaScript", "Tailwindcss", "React Charts"],
     link: "https://sample-dashboard-eta.vercel.app/",
     image: image2,
   },
-
   {
     title: "Tic Tac Toe Game",
     description:
@@ -35,5 +26,23 @@ export const projects = [
     technologies: ["HTML", "CSS", "JavaScript", "Nextjs"],
     image: image3,
     link: "https://connect-4-clone-4j2mrh8lv-liciacodes-projects.vercel.app/",
+  },
+];
+
+export const contactLinks = [
+  {
+    href: "https://www.linkedin.com/in/felicia-udosen-74828923a/",
+    iconType: "linkedin",
+    text: "Felicia Udosen",
+  },
+  {
+    href: "https://twitter.com/Liciacodes",
+    iconType: "xlogo",
+    text: "@liciacodes",
+  },
+  {
+    href: "https://instagram.com/Liciacodes_",
+    iconType: "instagram",
+    text: "@liciacodes_",
   },
 ];

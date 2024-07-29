@@ -1,45 +1,21 @@
 import React from "react";
-import { LinkedinLogo, InstagramLogo } from "phosphor-react";
-import XLogo from "../assets/XLogo.png";
 import SectionTitle from "./SectionTitle";
+import { contactLinks } from "../data";
+import Separator from "./Separator";
 
 const ContactLink = ({ href, icon, children }) => (
   <a
     href={href}
     target="_blank"
     rel="noopener noreferrer"
-    className="text-black flex items-center gap-x-1"
+    className="text-black flex items-center gap-x-1 texl-[18px] font-medium"
   >
     {icon}
     {children}
   </a>
 );
 
-const Separator = () => (
-  <span className="text-[#B9A390] mx-1 h-[22px] text-sm align-middle hidden md:block">
-    |
-  </span>
-);
-
 function Contact() {
-  const contactLinks = [
-    {
-      href: "https://www.linkedin.com/in/felicia-udosen-74828923a/",
-      icon: <LinkedinLogo size={22} weight="light" />,
-      text: "Felicia Udosen",
-    },
-    {
-      href: "https://twitter.com/Liciacodes",
-      icon: <img src={XLogo} alt="X logo" />,
-      text: "@liciacodes",
-    },
-    {
-      href: "https://instagram.com/Liciacodes_",
-      icon: <InstagramLogo size={22} weight="light" />,
-      text: "@liciacodes_",
-    },
-  ];
-
   return (
     <section
       id="contact"
@@ -47,9 +23,7 @@ function Contact() {
     >
       <div className="w-full max-w-4xl mx-auto">
         <SectionTitle title={"Say Hello"} />
-        {/* <h2 className="text-xl border-l-4 border-[#F7861D] pl-2 text-[18px] font-normal mb-6 text-black leading-[22.79px]">
-          Contact
-        </h2> */}
+
         <a
           href="mailto:udosenfelicia@gmail.com"
           className="text-black font-normal md:text-[26px] text-lg mb-2 block"
