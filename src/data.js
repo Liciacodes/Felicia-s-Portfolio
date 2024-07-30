@@ -1,6 +1,8 @@
 import image1 from "../src/assets/onboarding Screen.png";
 import image2 from "../src/assets/customer-order-dashboard.png";
 import image3 from "../src/assets/game.png";
+import { LinkedinLogo, InstagramLogo } from "phosphor-react";
+import TwitterLogo from "../src/assets/XLogo.png";
 
 export const projects = [
   {
@@ -34,15 +36,18 @@ export const contactLinks = [
     href: "https://www.linkedin.com/in/felicia-udosen-74828923a/",
     iconType: "linkedin",
     text: "Felicia Udosen",
+    icon: LinkedinLogo,
   },
   {
     href: "https://twitter.com/Liciacodes",
     iconType: "xlogo",
     text: "@liciacodes",
+    icon: TwitterLogo,
   },
   {
     href: "https://instagram.com/Liciacodes_",
     iconType: "instagram",
     text: "@liciacodes_",
+    icon: InstagramLogo,
   },
 ];

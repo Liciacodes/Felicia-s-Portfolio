@@ -2,19 +2,21 @@ import React from "react";
 import SectionTitle from "./SectionTitle";
 import { contactLinks } from "../data";
 import Separator from "./Separator";
-
-const ContactLink = ({ href, icon, children }) => (
+const ContactLink = ({ href, icon: Icon, children }) => (
   <a
     href={href}
     target="_blank"
     rel="noopener noreferrer"
-    className="text-black flex items-center gap-x-1 texl-[18px] font-medium"
+    className="text-black flex items-center gap-x-2 text-[18px] font-medium"
   >
-    {icon}
+    {typeof Icon === "string" ? (
+      <img src={Icon} alt={children} style={{ width: 18, height: 18 }} />
+    ) : (
+      <Icon size={24} weight="light" />
+    )}
     {children}
   </a>
 );
-
 function Contact() {
   return (
     <section
