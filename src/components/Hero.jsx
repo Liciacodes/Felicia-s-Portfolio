@@ -22,19 +22,18 @@ export default function Hero() {
   };
 
   return (
-    <section className="flex flex-col w-full px-6 md:px-0 my-20 md:w-[950px]">
+    <section className="flex flex-col mt-[148px] w-full px-6 md:px-0  md:w-[950px]">
       <div className="w-full max-w-4xl mx-auto">
         <h1 className="text-[22px] md:text-[26px] w-full h-full font-normal  text-black leading-9 md:w-[673px] md:h-[114px] ">
           👋🏽 I am Felicia, full-time Software Engineer, and part-time Olympic
           swimmer. Currently seeking for roles...
         </h1>
 
-        <div className="flex flex-col md:flex-row mt-6 md:items-center gap-x-6">
+        <div className="flex flex-col md:flex-row mt-8 md:items-center gap-x-8">
           <Button
             label="View Projects"
             bgColor={"bg-black"}
             Icon={<Barcode size={36} weight="light" />}
-            width="w-full md:w-[241px]"
             height="h-[54px]"
           />
           {/* <Button

@@ -5,13 +5,12 @@ export default function Button({
   Icon,
   bgColor = "bg-black",
   textColor = "text-white",
-  width = "w-full",
   height = "h-auto",
   ...props
 }) {
   return (
     <button
-      className={`group ${bgColor} ${textColor} ${width} ${height} hover:bg-gradient-to-r from-[#000000] to-[#613309] flex items-center justify-between px-4 py-[18px] font-normal text-[18px] transition-colors duration-300`}
+      className={`group ${bgColor} ${textColor} w-full lg:w-[241px] h-[54px] hover:bg-gradient-to-r from-[#000000] to-[#613309] flex items-center justify-between gap-4 px-[22px] py-[18px] font-normal text-[18px] transition-colors duration-300`}
       {...props}
     >
       <span className="whitespace-nowrap">{label}</span>
