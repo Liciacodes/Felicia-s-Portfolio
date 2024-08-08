@@ -21,7 +21,7 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="flex flex-col mt-10 px-6 md:px-0 w-full md:w-[950px] mb-20 text-black"
+      className="flex flex-col  px-6 md:px-0 w-full md:w-[950px] mt-20 md:mt-[148px] mb-20 md:mb-[148px] text-black"
     >
       <div className="w-full max-w-4xl mx-auto">
         <SectionTitle title={"Say Hello"} />
@@ -32,7 +32,7 @@ function Contact() {
         >
           udosenfelicia@gmail.com
         </a>
-        <div className="flex flex-col md:flex-row md:items-center space-y-3 md:space-y-0 gap-x-3">
+        <div className="flex flex-col md:flex-row md:items-center  md:space-y-0 gap-x-3">
           {contactLinks.map((link, index) => (
             <React.Fragment key={link.href}>
               {index > 0 && <Separator />}

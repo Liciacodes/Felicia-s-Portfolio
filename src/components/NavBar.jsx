@@ -41,8 +41,8 @@ export default function NavBar() {
 
   return (
     <>
-      <nav className="flex items-center  h-[69px] justify-between px-6 py-4 md:py-12 md:px-16 sticky top-0 z-30 bg-white">
-        <div className="flex items-center justify-between w-full md:w-auto">
+      <nav className="flex items-end h-[69px]  justify-between px-6 py-4 md:pt-4 md:px-16 sticky top-0 z-30 bg-white">
+        <div className="flex items-end justify-between w-full md:w-auto">
           <Logo />
           {isMobile && (
             <button
