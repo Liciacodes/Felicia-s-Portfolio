@@ -32,7 +32,7 @@ function Contact() {
         >
           udosenfelicia@gmail.com
         </a>
-        <div className="flex flex-col md:flex-row md:items-center  md:space-y-0 gap-x-3">
+        <div className="flex flex-col md:flex-row md:items-center md:space-y-0 gap-x-3">
           {contactLinks.map((link, index) => (
             <React.Fragment key={link.href}>
               {index > 0 && <Separator />}

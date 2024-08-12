@@ -8,7 +8,7 @@ export const projects = [
   {
     title: "Onboarding Screen Project",
     description:
-      "This is an Onboarding Screen Project It takes you through the process of creating an account which is also know as signing up, logging in by retrieving the user's details from the database.",
+      "This is an Onboarding Screen Project. It takes you through the process of creating an account which is also know as signing up, logging in by retrieving the user's details from the database.",
     technologies: ["HTML", "CSS", "Javascript", "React Js"],
     link: "https://feliciaonboarding-project.netlify.app/",
     image: image1,
@@ -27,7 +27,7 @@ export const projects = [
       "A classic Tic Tac Toe game built as a web application with an intelligent twist. This interactive game allows two players to take turns marking X's and O's on a 3x3 grid, with the added feature of move suggestions to enhance gameplay.",
     technologies: ["HTML", "CSS", "Javascript", "Nextjs"],
     image: image3,
-    link: "https://connect-4-clone-4j2mrh8lv-liciacodes-projects.vercel.app/",
+    link: "https://connect-4-clone.vercel.app/",
   },
 ];
 

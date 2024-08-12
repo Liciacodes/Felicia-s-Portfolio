@@ -3,7 +3,7 @@ import SectionTitle from "./SectionTitle";
 
 function Skills() {
   const Separator = () => (
-    <span className="text-[#B9A390]  py-1 h-[22px] text-sm align-middle">
+    <span className=" text-[#B9A390] mx-4 h-[22px] text-sm align-middle inline-flex items-center font-normal leading-[1]">
       |
     </span>
   );
@@ -20,25 +20,40 @@ function Skills() {
             <h3 className="font-normal text-[12px] text-[#B9A390]">
               Frontend Tools
             </h3>
-            <p className="font-medium text-[18px] ">
-              HTML <Separator /> CSS <Separator /> JavaScript <Separator />
-              React <Separator /> Vue
-            </p>
+            <div className="text-[18px] ">
+              HTML
+              <Separator />
+              CSS
+              <Separator />
+              JavaScript
+              <Separator />
+              React
+              <Separator />
+              Vue
+            </div>
           </div>
           <div className="mb-5">
             <h3 className="font-normal text-[12px] text-[#B9A390] ">
               Backend Tools
             </h3>
-            <p className="font-medium text-[18px] ">
-              Node.js <Separator /> Express.js <Separator /> MongoDB
-            </p>
+            <div className="text-[18px] ">
+              Node.js
+              <Separator />
+              Express.js
+              <Separator />
+              MongoDB
+            </div>
           </div>
           <div className="mb-1">
             <h3 className="font-normal text-[12px] text-[#B9A390] ">
               Other Tools
             </h3>
-            <p className="font-medium text-[18px] ">
-              Git <Separator /> Agile <Separator /> Teamwork
+            <p className="text-[18px]">
+              Git
+              <Separator />
+              Agile
+              <Separator />
+              Teamwork
             </p>
           </div>
         </div>

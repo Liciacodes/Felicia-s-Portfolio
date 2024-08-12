@@ -13,7 +13,7 @@ function NavLinks({ to, label, icon: Icon, onClick }) {
       onMouseLeave={() => setIsHovered(false)}
       className="flex items-center space-x-2 text-[#5C5F6A] hover:text-black "
     >
-      <span>{label}</span>
+      <span className="text-lg">{label}</span>
       {Icon && (
         <Icon
           size={22}

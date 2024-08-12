@@ -85,7 +85,7 @@ function Projects() {
                   <p className="text-[#B9A390] text-[12px] font-normal leading-[15.49px] hidden md:block mb-2">
                     Dev Stack
                   </p>
-                  <div className="text-black font-medium text-[18px] hidden md:flex gap-x-[12px]">
+                  <div className="text-black font-medium text-[18px] hidden md:flex gap-x-3">
                     {project.technologies.map((tech, techIndex) => (
                       <React.Fragment key={techIndex}>
                         {techIndex > 0 && <Separator />}
