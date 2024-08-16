@@ -57,24 +57,3 @@ export const contactLinks = [
     icon: InstagramLogo,
   },
 ];
-
-export const sampleLinks = [
-  {
-    href: "https://www.linkedin.com/in/felicia-udosen-74828923a/",
-    iconType: "linkedin",
-    text: "Felicia Udosen",
-    icon: LinkedinLogo,
-  },
-  {
-    href: "https://twitter.com/Liciacodes",
-    iconType: "xlogo",
-    text: "@liciacodes",
-    icon: Xlogo,
-  },
-  {
-    href: "https://instagram.com/Liciacodes_",
-    iconType: "instagram",
-    text: "@liciacodes_",
-    icon: InstagramLogo,
-  },
-];
