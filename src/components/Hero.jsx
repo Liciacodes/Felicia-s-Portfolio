@@ -8,7 +8,7 @@ export default function Hero() {
   const [isHovered, setIsHovered] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
 
-  const email = "udosenfelicia@gmail.com";
+  const email = "hello@feliciaudosen.com";
 
   const copyToClipboard = () => {
     navigator.clipboard

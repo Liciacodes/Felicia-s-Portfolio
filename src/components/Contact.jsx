@@ -27,10 +27,10 @@ function Contact() {
         <SectionTitle title={"Say Hello"} />
 
         <a
-          href="mailto:udosenfelicia@gmail.com"
+          href="mailto: hello@feliciaudosen.com"
           className="text-black font-normal md:text-[26px] text-lg mb-2 block"
         >
-          udosenfelicia@gmail.com
+          hello@feliciaudosen.com
         </a>
         <div className="flex flex-col md:flex-row md:items-center md:space-y-0 gap-x-3">
           {contactLinks.map((link, index) => (

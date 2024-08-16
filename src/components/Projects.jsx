@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { projects } from "../data";
 import SectionTitle from "./SectionTitle";
+import HoverGif from "./HoverGif";
 
 function Projects() {
   const Separator = () => (
@@ -34,12 +35,12 @@ function Projects() {
             className="flex flex-col md:flex-row items-stretch gap-4 mb-20 md:gap-y-0 md:gap-x-9 w-full"
           >
             <div className="flex flex-col w-full md:w-[448px] md:h-[291px]">
-              <div className="border border-[#F7861D] flex flex-col h-full">
-                <div className="flex-grow h-48 md:h-auto">
-                  <img
-                    src={project.image}
-                    alt={`${project.title} project screenshot`}
-                    className="w-full h-full object-cover"
+              <div className="border border-[#F7861D] flex flex-col h-full ">
+                <div className="flex-grow h-48 cursor-pointer">
+                  <HoverGif
+                    staticImage={project.staticImage}
+                    gifImage={project.gifImage}
+                    alt={project.title}
                   />
                 </div>
                 <a
@@ -48,7 +49,7 @@ function Projects() {
                   rel="noopener noreferrer"
                   className="block"
                 >
-                  <button className="w-full py-[18px] px-[20px] text-sm text-white bg-black hover:bg-gradient-to-r from-[#000000] to-[#613309]">
+                  <button className="w-full py-[18px] px-[20px] text-sm text-white bg-black hover:bg-gradient-to-r from-[#000000] to-[#613309] cursor-pointer">
                     View Live Link*
                   </button>
                 </a>
@@ -60,7 +61,6 @@ function Projects() {
 
             <div className="flex flex-col w-full md:w-1/2 mt-4 md:mt-0">
               <div className="relative h-full  md:w-[466px]">
-                {/* Added relative positioning and padding-bottom */}
                 <h3 className="text-[26px] text-black font-medium mb-4 leading-auto ">
                   {project.title}
                 </h3>
@@ -81,7 +81,6 @@ function Projects() {
                   <p className="hidden md:block">{project.description}</p>
                 </div>
                 <div className="absolute left-0 right-0 mt-[26px]">
-                  {/* Positioned absolutely */}
                   <p className="text-[#B9A390] text-[12px] font-normal leading-[15.49px] hidden md:block mb-2">
                     Dev Stack
                   </p>
