@@ -7,13 +7,14 @@ const ContactLink = ({ href, icon: Icon, children }) => (
     href={href}
     target="_blank"
     rel="noopener noreferrer"
-    className="text-black flex items-center gap-x-2 text-[18px] font-medium"
+    className="text-[#592C03] flex items-center gap-x-2 text-[18px] font-medium cursor-pointer"
   >
-    {typeof Icon === "string" ? (
-      <img src={Icon} alt={children} style={{ width: 18, height: 18 }} />
+    {<Icon size={19} weight="light" className="mt-[-7px]" />}
+    {/* {typeof Icon === "string" ? (
+      <img src={Icon} alt={children} style={{ width: 24, height: 24 }} />
     ) : (
-      <Icon size={24} weight="light" />
-    )}
+     
+    )} */}
     {children}
   </a>
 );
@@ -21,14 +22,14 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="flex flex-col  px-6 md:px-0 w-full md:w-[950px] mt-20 md:mt-[148px] mb-20 md:mb-[148px] text-black"
+      className="flex flex-col px-4 md:px-0 w-full md:w-[950px] mt-20 md:mt-[148px] mb-20 md:mb-[148px] text-[#592C03]"
     >
       <div className="w-full max-w-4xl mx-auto">
         <SectionTitle title={"Say Hello"} />
 
         <a
           href="mailto: hello@feliciaudosen.com"
-          className="text-black font-normal md:text-[26px] text-lg mb-2 block"
+          className="text-[#592C03] font-normal md:text-[26px] text-lg mb-4 block cursor-pointer"
         >
           hello@feliciaudosen.com
         </a>

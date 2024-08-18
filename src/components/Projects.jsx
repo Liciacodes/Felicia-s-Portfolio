@@ -34,14 +34,19 @@ function Projects() {
             key={index}
             className="flex flex-col md:flex-row items-stretch gap-4 mb-20 md:gap-y-0 md:gap-x-9 w-full"
           >
-            <div className="flex flex-col w-full md:w-[448px] md:h-[291px]">
-              <div className="border border-[#F7861D] flex flex-col h-full ">
-                <div className="flex-grow h-48 cursor-pointer">
-                  <HoverGif
+            <div className="flex flex-col w-full md:w-[448px]">
+              <div className="border border-[#F7861D] flex flex-col h-full">
+                <div className="h-48 flex-grow">
+                  <img
+                    src={project.gifImage}
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                  />
+                  {/* <HoverGif
                     staticImage={project.staticImage}
                     gifImage={project.gifImage}
                     alt={project.title}
-                  />
+                  /> */}
                 </div>
                 <a
                   href={project.link}
@@ -49,7 +54,7 @@ function Projects() {
                   rel="noopener noreferrer"
                   className="block"
                 >
-                  <button className="w-full py-[18px] px-[20px] text-sm text-white bg-black hover:bg-gradient-to-r from-[#000000] to-[#613309] cursor-pointer">
+                  <button className="w-full py-4 px-5 text-sm text-white bg-black hover:bg-gradient-to-r from-[#000000] to-[#613309] cursor-pointer">
                     View Live Link*
                   </button>
                 </a>
@@ -60,11 +65,11 @@ function Projects() {
             </div>
 
             <div className="flex flex-col w-full md:w-1/2 mt-4 md:mt-0">
-              <div className="relative h-full  md:w-[466px]">
-                <h3 className="text-[26px] text-black font-medium mb-4 leading-auto ">
+              <div className="relative h-full">
+                <h3 className="text-[26px] text-[#592C03] font-medium mb-4">
                   {project.title}
                 </h3>
-                <div className="text-black">
+                <div className="text-[#592C03]">
                   <p className="md:hidden text-lg">
                     {expandedDescriptions[index]
                       ? project.description
@@ -84,7 +89,7 @@ function Projects() {
                   <p className="text-[#B9A390] text-[12px] font-normal leading-[15.49px] hidden md:block mb-2">
                     Dev Stack
                   </p>
-                  <div className="text-black font-medium text-[18px] hidden md:flex gap-x-3">
+                  <div className="text-[#592C03] font-medium text-[18px] hidden md:flex gap-x-3">
                     {project.technologies.map((tech, techIndex) => (
                       <React.Fragment key={techIndex}>
                         {techIndex > 0 && <Separator />}

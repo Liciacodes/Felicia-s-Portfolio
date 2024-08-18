@@ -1,6 +1,7 @@
 import image1 from "../src/assets/onboarding Screen.png";
 import image2 from "../src/assets/customer-order-dashboard.png";
 import image3 from "../src/assets/game.png";
+import { RiTwitterXLine } from "react-icons/ri";
 import { LinkedinLogo, InstagramLogo } from "phosphor-react";
 import Xlogo from "./components/Xlogo";
 import LoginGif from "../src/gifs/Login Screen.gif";
@@ -48,7 +49,7 @@ export const contactLinks = [
     href: "https://twitter.com/Liciacodes",
     iconType: "xlogo",
     text: "@liciacodes",
-    icon: Xlogo,
+    icon: RiTwitterXLine,
   },
   {
     href: "https://instagram.com/Liciacodes_",

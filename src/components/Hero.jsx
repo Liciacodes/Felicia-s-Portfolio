@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Button from "./Button";
-import checked from "../assets/checkedCircle.png";
 import { Barcode, EnvelopeSimple, ClipboardText } from "phosphor-react";
 import CheckedIcon from "./CheckedIcon";
 
@@ -23,14 +22,14 @@ export default function Hero() {
   };
 
   return (
-    <section className="flex flex-col mt-20 md:mt-[148px] w-full px-6 md:px-0  md:w-[950px]">
+    <section className="flex flex-col mt-20 md:mt-[148px] w-full px-4 md:px-0  md:w-[950px]">
       <div className="w-full max-w-4xl mx-auto">
-        <h1 className="text-[22px] md:text-[26px] w-full h-full font-normal  text-black leading-9 md:w-[673px] md:h-[114px] ">
+        <h1 className="text-[22px] md:text-[26px] w-full h-full font-normal  text-[#592C03] leading-9 md:w-[673px] md:h-[114px] ">
           👋🏽 I am Felicia, full-time Software Engineer, and part-time Olympic
           swimmer. Currently seeking for roles...
         </h1>
 
-        <div className="flex flex-col md:flex-row mt-8 md:items-center gap-x-8">
+        <div className="flex flex-col md:flex-row mt-8 md:items-center md:gap-x-8 gap-x-0">
           <Button
             label="View Projects"
             bgColor={"bg-black"}
@@ -39,7 +38,7 @@ export default function Hero() {
           />
 
           <button
-            className="flex items-center justify-between md:justify-start mt-3 md:mt-0 w-full px-0 md:px-4 py-1 md:gap-x-2 text-black text-[18px] font-medium"
+            className="flex items-center justify-between md:justify-start mt-3 md:mt-0 w-full px-0 md:px-4 py-1 md:gap-x-2 text-[#592C03] text-[18px] font-medium"
             onClick={copyToClipboard}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}

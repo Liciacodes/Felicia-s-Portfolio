@@ -11,7 +11,7 @@ function NavLinks({ to, label, icon: Icon, onClick }) {
       }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="flex items-center space-x-2 text-[#5C5F6A] hover:text-black "
+      className="flex items-center space-x-2 text-[#5C5F6A] hover:text-[#592C03] "
     >
       <span className="text-lg">{label}</span>
       {Icon && (
@@ -19,8 +19,8 @@ function NavLinks({ to, label, icon: Icon, onClick }) {
           size={22}
           weight="light"
           className={`${
-            isHovered ? "text-black" : "text-[#F7861D]"
-          } transition-colors duration-300`}
+            isHovered ? "text-[#592C03]" : "text-[#F7861D]"
+          } transition-colors duration-300 mt-[-7px]`}
         />
       )}
     </a>
