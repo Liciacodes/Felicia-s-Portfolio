@@ -11,7 +11,7 @@ function NavLinks({ to, label, icon: Icon, onClick }) {
       }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="flex items-center space-x-2 text-[#5C5F6A] hover:text-[#592C03] "
+      className="flex items-center space-x-2 text-[#592C03] hover:text-[#592C03] "
     >
       <span className="text-lg">{label}</span>
       {Icon && (

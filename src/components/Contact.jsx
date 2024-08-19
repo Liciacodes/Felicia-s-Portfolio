@@ -9,12 +9,8 @@ const ContactLink = ({ href, icon: Icon, children }) => (
     rel="noopener noreferrer"
     className="text-[#592C03] flex items-center gap-x-2 text-[18px] font-medium cursor-pointer"
   >
-    {<Icon size={19} weight="light" className="mt-[-7px]" />}
-    {/* {typeof Icon === "string" ? (
-      <img src={Icon} alt={children} style={{ width: 24, height: 24 }} />
-    ) : (
-     
-    )} */}
+    {<Icon size={20} weight="light" className="mt-[-7px]" />}
+
     {children}
   </a>
 );
@@ -22,7 +18,7 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="flex flex-col px-4 md:px-0 w-full md:w-[950px] mt-20 md:mt-[148px] mb-20 md:mb-[148px] text-[#592C03]"
+      className="flex flex-col px-4 sm:px-6 lg:px-0 w-full sm:max-w-[750px]  md:max-w-[950px]  mt-20 md:mt-[148px] mb-20 md:mb-[148px] text-[#592C03]"
     >
       <div className="w-full max-w-4xl mx-auto">
         <SectionTitle title={"Say Hello"} />

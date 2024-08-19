@@ -5,9 +5,7 @@ import HoverGif from "./HoverGif";
 
 function Projects() {
   const Separator = () => (
-    <span className="text-[#B9A390]  py-1 h-[22px] text-sm align-middle">
-      |
-    </span>
+    <span className="text-[#B9A390] h-[22px] text-sm align-middle">|</span>
   );
 
   const [expandedDescriptions, setExpandedDescriptions] = useState({});
@@ -35,18 +33,13 @@ function Projects() {
             className="flex flex-col md:flex-row items-stretch gap-4 mb-20 md:gap-y-0 md:gap-x-9 w-full"
           >
             <div className="flex flex-col w-full md:w-[448px]">
-              <div className="border border-[#F7861D] flex flex-col h-full">
+              <div className=" flex flex-col h-full border border-[#F7861D]">
                 <div className="h-48 flex-grow">
                   <img
                     src={project.gifImage}
                     alt={project.title}
                     className="w-full h-full object-cover"
                   />
-                  {/* <HoverGif
-                    staticImage={project.staticImage}
-                    gifImage={project.gifImage}
-                    alt={project.title}
-                  /> */}
                 </div>
                 <a
                   href={project.link}
@@ -59,14 +52,19 @@ function Projects() {
                   </button>
                 </a>
               </div>
-              <p className="text-[#B9A390] font-normal text-sm mt-2">
-                *You'll be redirected to the live preview link
-              </p>
+              <a
+                href={project.githubLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#613309] font-normal text-sm mt-2 text-center underline w-full py-1 px-5"
+              >
+                View on Github
+              </a>
             </div>
 
             <div className="flex flex-col w-full md:w-1/2 mt-4 md:mt-0">
-              <div className="relative h-full">
-                <h3 className="text-[26px] text-[#592C03] font-medium mb-4">
+              <div className="relative h-full w-full">
+                <h3 className="text-[26px] text-[#592C03] font-medium w-full lg:w-[466px]">
                   {project.title}
                 </h3>
                 <div className="text-[#592C03]">
@@ -85,15 +83,19 @@ function Projects() {
                   </p>
                   <p className="hidden md:block">{project.description}</p>
                 </div>
-                <div className="absolute left-0 right-0 mt-[26px]">
-                  <p className="text-[#B9A390] text-[12px] font-normal leading-[15.49px] hidden md:block mb-2">
+                <div className="absolute left-0 right-0 mt-[16px]">
+                  {" "}
+                  {/* Reduced margin-top */}
+                  <p className="text-[#B9A390] text-[12px] font-normal leading-[15.49px] mb-0 lg:mb-2">
                     Dev Stack
                   </p>
-                  <div className="text-[#592C03] font-medium text-[18px] hidden md:flex gap-x-3">
+                  <div className="text-[#592C03] font-medium flex flex-wrap gap-x-3 gap-y-2 md:flex-nowrap md:gap-y-0">
                     {project.technologies.map((tech, techIndex) => (
                       <React.Fragment key={techIndex}>
                         {techIndex > 0 && <Separator />}
-                        <span>{tech}</span>
+                        <span className="text-[14px] lg:text-[18px]">
+                          {tech}
+                        </span>
                       </React.Fragment>
                     ))}
                   </div>

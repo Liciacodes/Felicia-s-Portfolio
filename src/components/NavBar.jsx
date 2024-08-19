@@ -41,7 +41,7 @@ export default function NavBar() {
 
   return (
     <>
-      <nav className="flex items-end h-[69px]  justify-between px-4 py-4 md:pt-4 md:px-16 sticky top-0 z-30 bg-white">
+      <nav className="flex items-end h-[69px]  justify-between  py-4 md:pt-4 md:px-12 lg:px-16  px-4 sm:px-6  w-full sticky top-0 z-30 bg-white">
         <div className="flex items-end justify-between w-full md:w-auto">
           <Logo />
 

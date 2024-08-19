@@ -2,7 +2,8 @@ import image1 from "../src/assets/onboarding Screen.png";
 import image2 from "../src/assets/customer-order-dashboard.png";
 import image3 from "../src/assets/game.png";
 import { RiTwitterXLine } from "react-icons/ri";
-import { LinkedinLogo, InstagramLogo } from "phosphor-react";
+import { LinkedinLogo, InstagramLogo, GithubLogo } from "phosphor-react";
+import { FaGithub } from "react-icons/fa";
 import Xlogo from "./components/Xlogo";
 import LoginGif from "../src/gifs/Login Screen.gif";
 import DashboardGif from "../src/gifs/Dashboard eCom.gif";
@@ -13,19 +14,21 @@ export const projects = [
     title: "Onboarding Screen Project",
     description:
       "This is an Onboarding Screen Project. It takes you through the process of creating an account which is also know as signing up, logging in by retrieving the user's details from the database.",
-    technologies: ["HTML", "CSS", "Javascript", "React Js"],
+    technologies: ["HTML", "CSS", "Javascript", "ReactJs"],
     link: "https://feliciaonboarding-project.netlify.app/",
     staticImage: image1,
     gifImage: LoginGif,
+    githubLink: "https://github.com/Liciacodes/Onboarding-Screen-Project",
   },
   {
     title: "Customer and Order Dashboard",
     description:
       "This is a responsive Customers and Order dashboard project built with Nextjs, chartjs and TailwindCSS. Data is fetched dynamically and displayed on the charts.",
-    technologies: ["HTML", "CSS", "Javascript", "React JS"],
+    technologies: ["HTML", "CSS", "Javascript", "ReactJS"],
     link: "https://sample-dashboard-eta.vercel.app/",
     staticImage: image2,
     gifImage: DashboardGif,
+    githubLink: "https://github.com/Liciacodes/Customer-and-Order-Dashboard",
   },
   {
     title: "Tic Tac Toe Game",
@@ -35,6 +38,7 @@ export const projects = [
     staticImage: image3,
     gifImage: GameGif,
     link: "https://connect-4-clone.vercel.app/",
+    githubLink: "https://github.com/Liciacodes/connect-4-clone",
   },
 ];
 
@@ -46,9 +50,9 @@ export const contactLinks = [
     icon: LinkedinLogo,
   },
   {
-    href: "https://twitter.com/Liciacodes",
+    href: "https://twitter.com/Liciacodes_",
     iconType: "xlogo",
-    text: "@liciacodes",
+    text: "@liciacodes_",
     icon: RiTwitterXLine,
   },
   {
@@ -56,5 +60,11 @@ export const contactLinks = [
     iconType: "instagram",
     text: "@liciacodes_",
     icon: InstagramLogo,
+  },
+  {
+    href: "https://github.com/Liciacodes/",
+    iconType: "github",
+    text: "@Liciacodes",
+    icon: FaGithub,
   },
 ];
