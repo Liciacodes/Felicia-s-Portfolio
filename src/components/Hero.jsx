@@ -25,8 +25,8 @@ export default function Hero({ scrollToSection }) {
     <section className="flex flex-col mt-20 md:mt-[148px] w-full px-4 sm:px-4 md:px-8 lg:px-0 sm:max-w-[750px] md:max-w-[950px]">
       <div className="w-full max-w-4xl mx-auto">
         <h1 className="text-[22px] md:text-[26px] w-full h-full font-normal text-[#592C03] leading-9 md:w-[673px] md:h-[114px]">
-          👋🏽 I am Felicia, full-time Software Engineer, and part-time Olympic
-          swimmer. Currently seeking for roles...
+          👋🏽 I am Felicia, full-time Frontend Engineer, and part-time Pro
+          Swimmer. Currently seeking new challenges...
         </h1>
 
         <div className="flex flex-col md:flex-row mt-8 md:items-center md:gap-x-8 gap-x-0">

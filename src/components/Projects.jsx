@@ -56,7 +56,7 @@ function Projects() {
                 href={project.githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#613309] font-normal text-sm mt-2 text-center underline w-full py-1 px-5"
+                className="text-[#613309] text-sm mt-2 block  w-full py-1 px-1 hover:text-[#F7861D] font-medium"
               >
                 View on Github
               </a>

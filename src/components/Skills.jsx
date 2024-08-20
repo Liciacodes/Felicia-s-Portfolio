@@ -21,21 +21,21 @@ function Skills() {
               Frontend Tools
             </h3>
             <div className="text-[14px] md:text-[18px] my-1 flex flex-wrap">
-              <span>HTML</span>
+              HTML
               <Separator />
-              <span>CSS</span>
+              CSS
               <Separator />
-              <span>JavaScript</span>
+              JavaScript
               <Separator />
-              <span>React</span>
+              React
               <Separator />
-              <span>Next JS</span>
+              Next JS
               <Separator />
-              <span>Tailwind CSS</span>
+              Tailwind CSS
               <Separator />
-              <span>Redux</span>
+              Redux
               <Separator />
-              <span>Styled Components</span>
+              Styled Components
             </div>
           </div>
           <div className="mb-1">
