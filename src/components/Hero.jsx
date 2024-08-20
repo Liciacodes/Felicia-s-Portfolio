@@ -3,7 +3,7 @@ import Button from "./Button";
 import { Barcode, EnvelopeSimple, ClipboardText } from "phosphor-react";
 import CheckedIcon from "./CheckedIcon";
 
-export default function Hero() {
+export default function Hero({ scrollToSection }) {
   const [isHovered, setIsHovered] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
 
@@ -22,9 +22,9 @@ export default function Hero() {
   };
 
   return (
-    <section className="flex flex-col mt-20 md:mt-[148px] w-full px-4 sm:px-4 md:px-8 lg:px-0   sm:max-w-[750px]  md:max-w-[950px] ">
+    <section className="flex flex-col mt-20 md:mt-[148px] w-full px-4 sm:px-4 md:px-8 lg:px-0 sm:max-w-[750px] md:max-w-[950px]">
       <div className="w-full max-w-4xl mx-auto">
-        <h1 className="text-[22px] md:text-[26px] w-full h-full font-normal  text-[#592C03] leading-9 md:w-[673px] md:h-[114px] ">
+        <h1 className="text-[22px] md:text-[26px] w-full h-full font-normal text-[#592C03] leading-9 md:w-[673px] md:h-[114px]">
           👋🏽 I am Felicia, full-time Software Engineer, and part-time Olympic
           swimmer. Currently seeking for roles...
         </h1>
@@ -35,6 +35,7 @@ export default function Hero() {
             bgColor={"bg-black"}
             Icon={<Barcode size={36} weight="light" />}
             height="h-[54px]"
+            onClick={() => scrollToSection("projects")}
           />
 
           <button
@@ -44,7 +45,6 @@ export default function Hero() {
             onMouseLeave={() => setIsHovered(false)}
           >
             <span className="text-[18px]">
-              {" "}
               {isCopied ? "Copied!" : "Copy Email"}
             </span>
             <span>

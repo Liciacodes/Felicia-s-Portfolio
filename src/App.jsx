@@ -7,31 +7,40 @@ import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 
 function App() {
+  // Function to scroll to a specific section
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="flex flex-col min-h-screen bg-white w-full">
-      <NavBar />
+      <NavBar scrollToSection={scrollToSection} />{" "}
+      {/* Pass scrollToSection to NavBar */}
       <div
         id="hero"
-        className="flex-grow flex flex-col items-center justify-center "
+        className="flex-grow flex flex-col items-center justify-center"
       >
-        <Hero />
+        <Hero scrollToSection={scrollToSection} />{" "}
+        {/* Pass scrollToSection to Hero */}
       </div>
       <div
         id="projects"
-        className="flex-grow flex flex-col items-center justify-center "
+        className="flex-grow flex flex-col items-center justify-center"
       >
         <Projects />
       </div>
-      s
       <div
         id="skills"
-        className="flex-grow flex flex-col items-center justify-center "
+        className="flex-grow flex flex-col items-center justify-center"
       >
         <Skills />
       </div>
       <div
         id="contact"
-        className="flex-grow flex flex-col items-center justify-center "
+        className="flex-grow flex flex-col items-center justify-center"
       >
         <Contact />
       </div>

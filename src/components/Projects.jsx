@@ -83,9 +83,7 @@ function Projects() {
                   </p>
                   <p className="hidden md:block">{project.description}</p>
                 </div>
-                <div className="absolute left-0 right-0 mt-[16px]">
-                  {" "}
-                  {/* Reduced margin-top */}
+                <div className="hidden md:block absolute left-0 right-0 mt-[16px]">
                   <p className="text-[#B9A390] text-[12px] font-normal leading-[15.49px] mb-0 lg:mb-2">
                     Dev Stack
                   </p>

@@ -1,16 +1,10 @@
 import React, { useState, useEffect } from "react";
 import NavLinks from "./NavLinks";
-import {
-  Browser,
-  BracketsCurly,
-  GraduationCap,
-  At,
-  List,
-  X,
-} from "phosphor-react";
+import { Browser, BracketsCurly, At, List, X } from "phosphor-react";
 import Logo from "./Logo";
 
-export default function NavBar() {
+export default function NavBar({ scrollToSection }) {
+  // Accept scrollToSection as a prop
   const [menuOpen, setMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -31,17 +25,9 @@ export default function NavBar() {
     }
   }, [isMobile]);
 
-  const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-    setMenuOpen(false);
-  };
-
   return (
     <>
-      <nav className="flex items-end h-[69px]  justify-between  py-4 md:pt-4 md:px-12 lg:px-16  px-4 sm:px-6  w-full sticky top-0 z-30 bg-white">
+      <nav className="flex items-end h-[69px] justify-between py-4 md:pt-4 md:px-12 lg:px-16 px-4 sm:px-6 w-full sticky top-0 z-30 bg-white">
         <div className="flex items-end justify-between w-full md:w-auto">
           <Logo />
 
@@ -65,7 +51,7 @@ export default function NavBar() {
         </div>
         {isMobile && menuOpen && (
           <div
-            className="fixed inset-0  bg-black bg-opacity-50 z-40"
+            className="fixed inset-0 bg-black bg-opacity-50 z-40"
             onClick={() => setMenuOpen(false)}
           ></div>
         )}
