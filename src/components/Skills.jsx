@@ -17,32 +17,32 @@ function Skills() {
         <SectionTitle title={"Skills"} />
         <div className="text-[#592C03]">
           <div className="mb-5">
-            <h3 className="font-normal text-[12px] text-[#B9A390]">
+            <h3 className="font-normal text-[12px] md:text-[14px] lg:text-[16px] text-[#B9A390]">
               Frontend Tools
             </h3>
-            <div className="text-[14px] md:text-[18px] my-1 flex flex-wrap">
-              HTML
+            <div className="text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] my-1 flex flex-wrap ">
+              <span>HTML</span>
               <Separator />
-              CSS
+              <span>CSS</span>
               <Separator />
-              JavaScript
+              <span>JavaScript</span>
               <Separator />
-              React
+              <span>React</span>
               <Separator />
-              Next JS
+              <span>Next JS</span>
               <Separator />
-              Tailwind CSS
+              <span>Tailwind CSS</span>
               <Separator />
-              Redux
+              <span>Redux</span>
               <Separator />
-              Styled Components
+              <span>Styled Components</span>
             </div>
           </div>
           <div className="mb-1">
-            <h3 className="font-normal text-[12px] text-[#B9A390]">
+            <h3 className="font-normal text-[12px] md:text-[14px] lg:text-[16px] text-[#B9A390]">
               Other Skills
             </h3>
-            <div className="text-[14px] md:text-[18px] flex flex-wrap">
+            <div className="text-[14px] md:text-[16px] lg:text-[18px] flex flex-wrap">
               <span>Agile</span>
               <Separator />
               <span>Teamwork</span>

@@ -1,10 +1,7 @@
 import image1 from "../src/assets/onboarding Screen.png";
 import image2 from "../src/assets/customer-order-dashboard.png";
 import image3 from "../src/assets/game.png";
-import { RiTwitterXLine } from "react-icons/ri";
-import { LinkedinLogo, InstagramLogo, GithubLogo } from "phosphor-react";
-import { FaGithub } from "react-icons/fa";
-import Xlogo from "./components/Xlogo";
+import { FaLinkedin, FaTwitterSquare, FaGithub } from "react-icons/fa";
 import LoginGif from "../src/gifs/Login Screen.gif";
 import DashboardGif from "../src/gifs/Dashboard eCom.gif";
 import GameGif from "../src/gifs/Game-Felz.gif";
@@ -47,20 +44,20 @@ export const contactLinks = [
     href: "https://www.linkedin.com/in/felicia-udosen-74828923a/",
     iconType: "linkedin",
     text: "Felicia Udosen",
-    icon: LinkedinLogo,
+    icon: FaLinkedin,
   },
   {
     href: "https://twitter.com/Liciacodes_",
     iconType: "xlogo",
     text: "@liciacodes_",
-    icon: RiTwitterXLine,
+    icon: FaTwitterSquare,
   },
-  {
-    href: "https://instagram.com/Liciacodes_",
-    iconType: "instagram",
-    text: "@liciacodes_",
-    icon: InstagramLogo,
-  },
+  // {
+  //   href: "https://instagram.com/Liciacodes_",
+  //   iconType: "instagram",
+  //   text: "@liciacodes_",
+  //   icon: InstagramLogo,
+  // },
   {
     href: "https://github.com/Liciacodes/",
     iconType: "github",
