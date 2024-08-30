@@ -7,7 +7,7 @@ export default function Hero({ scrollToSection }) {
   const [isHovered, setIsHovered] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
 
-  const email = "hello@feliciaudosen.com";
+  const email = "udosenfelicia@gmail.com";
 
   const copyToClipboard = () => {
     navigator.clipboard
