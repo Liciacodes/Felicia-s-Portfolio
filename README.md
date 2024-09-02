@@ -3,6 +3,10 @@
 Welcome to my portfolio repository! Here you'll find a collection of my projects, showcasing my skills and experience in frontend development. Each project is carefully crafted to demonstrate my proficiency in various technologies, and my ability to solve complex problems with creative solutions.
 
 
+https://github.com/user-attachments/assets/0d914961-d619-4f64-a2c6-3bd9c04e7d46
+
+
+
 ## Projects
 
 ### 1. Onboarding Screen
