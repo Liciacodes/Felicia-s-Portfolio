@@ -1,12 +1,24 @@
 import image1 from "../src/assets/onboarding Screen.png";
 import image2 from "../src/assets/customer-order-dashboard.png";
 import image3 from "../src/assets/game.png";
+import image4 from '../src/assets/Touki.jpeg'
 import { FaLinkedin, FaTwitterSquare, FaGithub } from "react-icons/fa";
 import LoginGif from "../src/gifs/Login Screen.gif";
 import DashboardGif from "../src/gifs/Dashboard eCom.gif";
 import GameGif from "../src/gifs/Game-Felz.gif";
+import ToukiGif from "../src/gifs/TOUKI GIF.gif"
 
 export const projects = [
+  {
+    title: "Touki Grotesk",
+    description:
+      "Touki Grotesk is a contemporary grotesque sans inspired by the typographic language of early post-colonial Africa.",
+    technologies: ["Javascript", "ReactJs", "Typescript"],
+    link: "https://www.udifoundry.com/fonts/touki-grotesk",
+    staticImage: image4,
+    gifImage: ToukiGif,
+    githubLink: "https://github.com/Liciacodes/Udi-Foundry-V1",
+  },
   {
     title: "Onboarding Screen Project",
     description:

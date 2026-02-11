@@ -9,7 +9,18 @@ https://github.com/user-attachments/assets/0d914961-d619-4f64-a2c6-3bd9c04e7d46
 
 ## Projects
 
-### 1. Onboarding Screen
+### 1. Touki Grotesk Specimen Page
+**Description:** Touki Grotesk is a contemporary grotesque sans inspired by the typographic language of early post-colonial Africa. Developed through research into African visual culture from the mid century. Touki Grotesk draws from a time when cinema print and street signage shaped public identity across the continent. 
+
+**Technologies Used:** HTML, CSS, JavaScript, React, TailwindCSS, Nextjs, Typescript.
+
+**Live Demo:** https://www.udifoundry.com/fonts/touki-grotesk
+
+**Repository:** https://github.com/Liciacodes/Udi-Foundry-V1
+
+---
+
+### 2. Onboarding Screen
 **Description:** This is an Onboarding Screen Project It takes you through the process of creating an account which is also know as signing up, logging in by retrieving the user's details from the database and finally having access to the dashboard. I also implemented the google authentication using the google API. LocalStorage served as my default database.
 
 **Technologies Used:** HTML, CSS, JavaScript, React, TailwindCSS.
@@ -20,7 +31,7 @@ https://github.com/user-attachments/assets/0d914961-d619-4f64-a2c6-3bd9c04e7d46
 
 ---
 
-### 2. Customer and Order Dashboard
+### 3. Customer and Order Dashboard
 **Description:** This is a responsive Customers and Order dashboard project built with Nextjs, chartjs and TailwindCSS. Data is fetched dynamically and displayed on the charts.
 
 **Technologies Used:** Html, Css, Javascript, TailwindCss, React Charts, Next JS.
@@ -31,7 +42,7 @@ https://github.com/user-attachments/assets/0d914961-d619-4f64-a2c6-3bd9c04e7d46
 
 ---
 
-### 3. Tic Tac Toe
+### 4. Tic Tac Toe
 **Description:**  A classic Tic Tac Toe game built as a web application with an intelligent twist. This interactive game allows two players to take turns marking X's and O's on a 3x3 grid, with the added feature of move suggestions to enhance
 
 **Technologies Used:** HTML, CSS, JavaScript, React,Next JS, Styled Components.
