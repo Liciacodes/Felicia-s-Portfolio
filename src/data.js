@@ -12,7 +12,8 @@ export const projects = [
   {
     title: "Touki Grotesk",
     description:
-      "Touki Grotesk is a contemporary grotesque sans inspired by the typographic language of early post-colonial Africa.",
+      `Touki Grotesk is a contemporary grotesque sans inspired by the typographic language of early post-colonial Africa.
+      Developed through research into African visual culture from the mid century. Touki Grotesk draws from a time when cinema print and street signage shaped public identity across the continent`,
     technologies: ["Javascript", "ReactJs", "Typescript"],
     link: "https://www.udifoundry.com/fonts/touki-grotesk",
     staticImage: image4,
