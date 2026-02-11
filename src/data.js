@@ -6,7 +6,7 @@ import { FaLinkedin, FaTwitterSquare, FaGithub } from "react-icons/fa";
 import LoginGif from "../src/gifs/Login Screen.gif";
 import DashboardGif from "../src/gifs/Dashboard eCom.gif";
 import GameGif from "../src/gifs/Game-Felz.gif";
-import ToukiGif from "../src/gifs/TOUKI GIF.gif"
+import ToukiGif from "../src/gifs/TOUKI GIF (1).gif"
 
 export const projects = [
   {
