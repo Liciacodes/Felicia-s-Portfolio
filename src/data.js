@@ -6,19 +6,29 @@ import { FaLinkedin, FaTwitterSquare, FaGithub } from "react-icons/fa";
 import LoginGif from "../src/gifs/Login Screen.gif";
 import DashboardGif from "../src/gifs/Dashboard eCom.gif";
 import GameGif from "../src/gifs/Game-Felz.gif";
-import ToukiGif from "../src/gifs/TOUKI GIF (1).gif"
+import ToukiGif from "../src/gifs/Touki.gif"
+import intellidocGif from "../src/gifs/Intellidoc.gif";
 
 export const projects = [
   {
     title: "Touki Grotesk",
     description:
-      `Touki Grotesk is a contemporary grotesque sans inspired by the typographic language of early post-colonial Africa.
-      Developed through research into African visual culture from the mid century. Touki Grotesk draws from a time when cinema print and street signage shaped public identity across the continent`,
-    technologies: ["Javascript", "ReactJs", "Typescript"],
+      "A type specimen website built for Udi Foundry to showcase and sell the Touki Grotesk typeface. Features font previews, interactive glyph explorer, weight and style tester, and a clean editorial layout that reflects the typeface's post-colonial African identity.",
+    technologies: ["Javascript", "ReactJs", "Typescript",'Nextjs'],
     link: "https://www.udifoundry.com/fonts/touki-grotesk",
     staticImage: image4,
     gifImage: ToukiGif,
     githubLink: "https://github.com/Liciacodes/Udi-Foundry-V1",
+  },
+  {
+    title: "Intellidoc",
+    description:
+      "An AI-powered document assistant where users can upload PDFs and DOCX files and interact with the content. Using the Grok API, it generates summaries, extracts key points and answers questions from the document.",
+    technologies: ["React", "Node.js", "Express", "Supabase", "Prisma", "Gemini API", "JWT", "TypeScript"],
+    link: "https://intellidocclient.netlify.app/",
+    staticImage: image4,
+    gifImage: intellidocGif,
+    githubLink: "https://github.com/Liciacodes/intellidoc-client",
   },
   {
     title: "Onboarding Screen Project",
@@ -65,12 +75,6 @@ export const contactLinks = [
     text: "@liciacodes_",
     icon: FaTwitterSquare,
   },
-  // {
-  //   href: "https://instagram.com/Liciacodes_",
-  //   iconType: "instagram",
-  //   text: "@liciacodes_",
-  //   icon: InstagramLogo,
-  // },
   {
     href: "https://github.com/Liciacodes/",
     iconType: "github",
@@ -78,3 +82,4 @@ export const contactLinks = [
     icon: FaGithub,
   },
 ];
+
