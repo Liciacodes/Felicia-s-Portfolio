@@ -3,7 +3,7 @@ import SectionTitle from "./SectionTitle";
 
 function Skills() {
   const Separator = () => (
-    <span className="text-[#B9A390] mx-2 h-[22px] text-sm align-middle inline-flex items-center font-normal leading-[1]">
+    <span className="text-sandDark mx-2 h-[22px] text-sm align-middle inline-flex items-center font-normal leading-[1]">
       |
     </span>
   );
@@ -17,7 +17,7 @@ function Skills() {
         <SectionTitle title={"Skills"} />
         <div className="text-[#592C03]">
           <div className="mb-5">
-            <h3 className="font-normal text-[12px] md:text-[14px] lg:text-[16px] text-[#B9A390]">
+            <h3 className="font-normal text-[12px] md:text-[14px] lg:text-[16px] text-sandDark">
               Frontend Tools
             </h3>
             <div className="text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] my-1 flex flex-wrap ">
@@ -39,7 +39,7 @@ function Skills() {
             </div>
           </div>
           <div className="mb-1">
-            <h3 className="font-normal text-[12px] md:text-[14px] lg:text-[16px] text-[#B9A390]">
+            <h3 className="font-normal text-[12px] md:text-[14px] lg:text-[16px] text-sandDark">
               Other Skills
             </h3>
             <div className="text-[14px] md:text-[16px] lg:text-[18px] flex flex-wrap">
@@ -54,6 +54,11 @@ function Skills() {
               <span>RESTful APIs</span>
             </div>
           </div>
+          <p className="text-[12px] md:text-[13px] text-sandDark italic mt-4">
+            I also have basic backend experience — Node.js, Express, and REST APIs —
+            from building full features end-to-end on projects like SquadMap and
+            IntelliDoc.
+          </p>
         </div>
       </div>
     </section>

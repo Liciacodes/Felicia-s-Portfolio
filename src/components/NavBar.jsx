@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import NavLinks from "./NavLinks";
-import { Browser, BracketsCurly, At, List, X } from "phosphor-react";
+import { Browser, BracketsCurly, At, List, X, FileText, NotePencil } from "phosphor-react";
 import Logo from "./Logo";
 
 export default function NavBar({ scrollToSection }) {
@@ -35,6 +35,8 @@ export default function NavBar({ scrollToSection }) {
             <button
               onClick={() => setMenuOpen(!menuOpen)}
               className="text-2xl md:hidden z-50"
+              aria-label={menuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={menuOpen}
             >
               {menuOpen ? (
                 <X size={32} weight="bold" color="#F7861D" />
@@ -59,7 +61,7 @@ export default function NavBar({ scrollToSection }) {
           className={`${
             isMobile
               ? menuOpen
-                ? "flex fixed top-0 right-0 h-1/3 w-full space-y-8 md:space-y-0 bg-white p-6 shadow-lg transform transition-transform duration-300 ease-in-out"
+                ? "flex fixed top-0 right-0 h-auto max-h-[80vh] w-full space-y-6 md:space-y-0 bg-white p-6 pt-20 shadow-lg overflow-y-auto transform transition-transform duration-300 ease-in-out"
                 : "hidden"
               : "flex"
           } flex-col md:flex-row md:flex items-center justify-center md:space-x-10 md:static md:bg-transparent md:p-0 z-40`}
@@ -71,10 +73,22 @@ export default function NavBar({ scrollToSection }) {
             onClick={() => scrollToSection("hero")}
           />
           <NavLinks
+            to="#resume"
+            label="Resume"
+            icon={FileText}
+            onClick={() => scrollToSection("resume")}
+          />
+          <NavLinks
             to="#projects"
             label="Work"
             icon={BracketsCurly}
             onClick={() => scrollToSection("projects")}
+          />
+          <NavLinks
+            to="#writing"
+            label="Writing"
+            icon={NotePencil}
+            onClick={() => scrollToSection("writing")}
           />
           <NavLinks
             to="#contact"

@@ -20,7 +20,7 @@ function NavLinks({ to, label, icon: Icon, onClick }) {
           weight="light"
           className={`${
             isHovered ? "text-[#592C03]" : "text-[#F7861D]"
-          } transition-colors duration-300 mt-[-7px]`}
+          } transition-colors duration-base ease-signature mt-[-7px]`}
         />
       )}
     </a>

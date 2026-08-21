@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#000000" />
+      <stop offset="100%" stop-color="#613309" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)" />
+  <circle cx="180" cy="140" r="70" fill="#F7861D" opacity="0.85" />
+  <circle cx="560" cy="300" r="90" fill="#B9A390" opacity="0.55" />
+  <circle cx="620" cy="120" r="40" fill="#F7861D" opacity="0.6" />
+  <text x="400" y="235" font-family="Overpass Mono, monospace" font-size="56" fill="#FFFFFF" text-anchor="middle" font-weight="600">SquadMap</text>
+  <text x="400" y="275" font-family="Overpass Mono, monospace" font-size="18" fill="#F7861D" text-anchor="middle">Preview image coming soon</text>
+</svg>

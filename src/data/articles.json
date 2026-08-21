@@ -1,0 +1,20 @@
+[
+  {
+    "title": "How I Built SquadMap — A Real-Time Location Sharing App for Events",
+    "excerpt": "Building a WebSocket-powered app that lets friends find each other at events in real time — no accounts, no friction, just a 6-character code. The Problem If...",
+    "url": "https://liciacodes.hashnode.dev/how-i-built-squadmap-a-real-time-location-sharing-app-for-events",
+    "publishedAt": "Fri, 21 Aug 2026 10:49:29 GMT"
+  },
+  {
+    "title": "How to Implement Local Storage in a React Project",
+    "excerpt": "Have you ever tried to build a React project that required data to be stored in a database and then retrieved and manipulated, but you have no idea how a...",
+    "url": "https://liciacodes.hashnode.dev/how-to-implement-local-storage-in-a-react-project",
+    "publishedAt": "Mon, 13 Mar 2023 10:05:15 GMT"
+  },
+  {
+    "title": "How to Create Forms in React using react-hook-form",
+    "excerpt": "Hello everyone! Today, we would be looking at how to create forms with react-hook-form as opposed to the conventional react forms using the useState hook....",
+    "url": "https://liciacodes.hashnode.dev/how-to-create-forms-in-react-using-react-hook-form",
+    "publishedAt": "Fri, 03 Mar 2023 11:47:44 GMT"
+  }
+]

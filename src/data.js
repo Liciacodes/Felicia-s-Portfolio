@@ -1,44 +1,51 @@
-import image1 from "../src/assets/onboarding Screen.png";
-import image2 from "../src/assets/customer-order-dashboard.png";
-import image3 from "../src/assets/game.png";
-import image4 from '../src/assets/Touki.jpeg'
+import squadMapPoster from "../src/videos/squadmap-poster.png";
 import { FaLinkedin, FaTwitterSquare, FaGithub } from "react-icons/fa";
-import LoginGif from "../src/gifs/Login Screen.gif";
-import DashboardGif from "../src/gifs/Dashboard eCom.gif";
-import GameGif from "../src/gifs/Game-Felz.gif";
-import ToukiGif from "../src/gifs/Touki.gif"
-import intellidocGif from "../src/gifs/Intellidoc.gif";
+import dashboardVideo from "../src/videos/dashboard.mp4";
+import dashboardPoster from "../src/videos/dashboard-poster.jpg";
+import toukiVideo from "../src/videos/touki.mp4";
+import toukiPoster from "../src/videos/touki-poster.jpg";
+import intellidocVideo from "../src/videos/intellidoc.mp4";
+import intellidocPoster from "../src/videos/intellidoc-poster.jpg";
+import mathStreakGif from "../src/videos/maths-streak.gif";
 
 export const projects = [
+  {
+    title: "SquadMap",
+    description:
+      "SquadMap is a real-time, event-based friend finder that helps people find each other on the fly. It uses a Socket.io layer for live location updates and presence.",
+    technologies: ["React", "TypeScript", "Node.js", "Socket.io"],
+    link: "https://squad-map-kappa.vercel.app/",
+    media: { type: "image", src: squadMapPoster, poster: squadMapPoster },
+    githubLink: "https://github.com/Liciacodes",
+    caseStudyUrl:
+      "https://liciacodes.hashnode.dev/how-i-built-squadmap-a-real-time-location-sharing-app-for-events",
+  },
+  {
+    title: "Intellidoc",
+    description:
+      "An AI-powered document assistant where users can upload PDFs and DOCX files and interact with the content. Using the Groq AI API, it generates summaries, extracts key points and answers questions from the document.",
+    technologies: ["React", "Node.js", "Express", "Prisma", "Supabase", "Groq AI API", "JWT"],
+    link: "https://intellidocclient.netlify.app/",
+    media: { type: "video", src: intellidocVideo, poster: intellidocPoster },
+    githubLink: "https://github.com/Liciacodes/intellidoc-client",
+  },
   {
     title: "Touki Grotesk",
     description:
       "A type specimen website built for Udi Foundry to showcase and sell the Touki Grotesk typeface. Features font previews, interactive glyph explorer, weight and style tester, and a clean editorial layout that reflects the typeface's post-colonial African identity.",
     technologies: ["Javascript", "ReactJs", "Typescript",'Nextjs'],
     link: "https://www.udifoundry.com/fonts/touki-grotesk",
-    staticImage: image4,
-    gifImage: ToukiGif,
+    media: { type: "video", src: toukiVideo, poster: toukiPoster },
     githubLink: "https://github.com/Liciacodes/Udi-Foundry-V1",
   },
   {
-    title: "Intellidoc",
+    title: "MathStreak",
     description:
-      "An AI-powered document assistant where users can upload PDFs and DOCX files and interact with the content. Using the Grok API, it generates summaries, extracts key points and answers questions from the document.",
-    technologies: ["React", "Node.js", "Express", "Supabase", "Prisma", "Gemini API", "JWT", "TypeScript"],
-    link: "https://intellidocclient.netlify.app/",
-    staticImage: image4,
-    gifImage: intellidocGif,
-    githubLink: "https://github.com/Liciacodes/intellidoc-client",
-  },
-  {
-    title: "Onboarding Screen Project",
-    description:
-      "This is an Onboarding Screen Project. It takes you through the process of creating an account which is also know as signing up, logging in by retrieving the user's details from the database.",
-    technologies: ["HTML", "CSS", "Javascript", "ReactJs"],
-    link: "https://feliciaonboarding-project.netlify.app/",
-    staticImage: image1,
-    gifImage: LoginGif,
-    githubLink: "https://github.com/Liciacodes/Onboarding-Screen-Project",
+      "A daily math quiz app. One AI-generated question a day, answer it, build your streak.",
+    technologies: ["React", "TypeScript", "Node.js", "Express", "Prisma", "PostgreSQL", "Groq AI API"],
+    link: "https://maths-streak-client.vercel.app/quiz",
+    media: { type: "image", src: mathStreakGif, poster: mathStreakGif },
+    githubLink: "https://github.com/Liciacodes/MathsStreak-client",
   },
   {
     title: "Customer and Order Dashboard",
@@ -46,19 +53,8 @@ export const projects = [
       "This is a responsive Customers and Order dashboard project built with Nextjs, chartjs and TailwindCSS. Data is fetched dynamically and displayed on the charts.",
     technologies: ["HTML", "CSS", "Javascript", "ReactJS"],
     link: "https://sample-dashboard-eta.vercel.app/",
-    staticImage: image2,
-    gifImage: DashboardGif,
+    media: { type: "video", src: dashboardVideo, poster: dashboardPoster },
     githubLink: "https://github.com/Liciacodes/Customer-and-Order-Dashboard",
-  },
-  {
-    title: "Tic Tac Toe Game",
-    description:
-      "A classic Tic Tac Toe game built as a web application with an intelligent twist. This interactive game allows two players to take turns marking X's and O's on a 3x3 grid, with the added feature of move suggestions to enhance gameplay.",
-    technologies: ["HTML", "CSS", "Javascript", "Nextjs"],
-    staticImage: image3,
-    gifImage: GameGif,
-    link: "https://connect-4-clone.vercel.app/",
-    githubLink: "https://github.com/Liciacodes/connect-4-clone",
   },
 ];
 
