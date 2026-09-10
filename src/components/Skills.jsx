@@ -15,50 +15,75 @@ function Skills() {
     >
       <div className="block w-full max-w-4xl mx-auto">
         <SectionTitle title={"Skills"} />
+
         <div className="text-[#592C03]">
           <div className="mb-5">
             <h3 className="font-normal text-[12px] md:text-[14px] lg:text-[16px] text-sandDark">
-              Frontend Tools
+              Frontend
             </h3>
-            <div className="text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] my-1 flex flex-wrap ">
+
+            <div className="text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] my-1 flex flex-wrap">
               <span>HTML</span>
               <Separator />
               <span>CSS</span>
               <Separator />
               <span>JavaScript</span>
               <Separator />
+              <span>TypeScript</span>
+              <Separator />
               <span>React</span>
               <Separator />
-              <span>Next JS</span>
+              <span>Next.js</span>
               <Separator />
               <span>Tailwind CSS</span>
               <Separator />
               <span>Redux</span>
               <Separator />
-              <span>Styled Components</span>
+              <span>Zustand</span>
+              <Separator />
+              <span>TanStack Query</span>
             </div>
           </div>
+
+          <div className="mb-5">
+  <h3 className="font-normal text-[12px] md:text-[14px] lg:text-[16px] text-sandDark">
+    Backend & Database
+  </h3>
+
+  <div className="text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] my-1 flex flex-wrap">
+    <span>Node.js</span>
+    <Separator />
+    <span>Express</span>
+    <Separator />
+    <span>PostgreSQL</span>
+    <Separator />
+    <span>MongoDB</span>
+    <Separator />
+    <span>Prisma</span>
+    <Separator />
+    <span>Supabase</span>
+    <Separator />
+    <span>REST APIs</span>
+  </div>
+</div>
+
           <div className="mb-1">
             <h3 className="font-normal text-[12px] md:text-[14px] lg:text-[16px] text-sandDark">
-              Other Skills
+              Tools & Testing
             </h3>
-            <div className="text-[14px] md:text-[16px] lg:text-[18px] flex flex-wrap">
-              <span>Agile</span>
+
+            <div className="text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] my-1 flex flex-wrap">
+              <span>Git</span>
               <Separator />
-              <span>Teamwork</span>
+              <span>GitHub</span>
               <Separator />
-              <span>Problem-Solving</span>
+              <span>Vitest</span>
               <Separator />
-              <span>Git/GitHub</span>
+              <span>Supertest</span>
               <Separator />
-              <span>RESTful APIs</span>
+              <span>Postman</span>
             </div>
           </div>
-          <p className="text-[12px] md:text-[13px] text-sandDark italic mt-4">
-            I also have basic backend experience — Node.js, Express, and REST APIs —
-            from building full features end-to-end on projects like SquadMap and
-            IntelliDoc.
-          </p>
         </div>
       </div>
     </section>

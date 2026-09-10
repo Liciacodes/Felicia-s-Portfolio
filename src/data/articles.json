@@ -1,5 +1,17 @@
 [
   {
+    "title": "How I Built Triage — A Payment Operations Dashboard for Managing Transaction Exceptions",
+    "excerpt": "While building full-stack projects, I wanted to work on something that involved more than displaying data and performing basic CRUD operations. I wanted to...",
+    "url": "https://liciacodes.hashnode.dev/how-i-built-triage-a-payment-operations-dashboard-for-managing-transaction-exceptions",
+    "publishedAt": "Thu, 10 Sep 2026 13:02:59 GMT"
+  },
+  {
+    "title": "How to Test a Node.js and TypeScript API with Vitest and Supertest",
+    "excerpt": "Introduction When building an application, it's easy to verify that something works by running the app and testing it manually. You create a transaction, click...",
+    "url": "https://liciacodes.hashnode.dev/how-to-test-a-node-js-and-typescript-api-with-vitest-and-supertest",
+    "publishedAt": "Tue, 08 Sep 2026 13:33:54 GMT"
+  },
+  {
     "title": "How I Built SquadMap — A Real-Time Location Sharing App for Events",
     "excerpt": "Building a WebSocket-powered app that lets friends find each other at events in real time — no accounts, no friction, just a 6-character code. The Problem If...",
     "url": "https://liciacodes.hashnode.dev/how-i-built-squadmap-a-real-time-location-sharing-app-for-events",

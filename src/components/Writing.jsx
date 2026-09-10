@@ -2,10 +2,9 @@ import React from "react";
 import { ArrowSquareOut } from "phosphor-react";
 import SectionTitle from "./SectionTitle";
 import MagneticButton from "./MagneticButton";
-import { projects } from "../data";
 import articles from "../data/articles.json";
 
-const FEATURED_URL = projects.find((p) => p.title === "SquadMap")?.caseStudyUrl;
+
 const PUBLICATION_URL = "https://liciacodes.hashnode.dev";
 
 function formatDate(dateString) {
@@ -61,8 +60,12 @@ function ArticleCard({ post, featured }) {
 }
 
 export default function Writing() {
-  const featuredPost = articles.find((post) => post.url === FEATURED_URL);
-  const restPosts = articles.filter((post) => post.url !== FEATURED_URL);
+const sortedArticles = [...articles].sort(
+  (a, b) => new Date(b.publishedAt) - new Date(a.publishedAt)
+);
+
+const featuredPost = sortedArticles[0];
+const restPosts = sortedArticles.slice(1);
 
   return (
     <section

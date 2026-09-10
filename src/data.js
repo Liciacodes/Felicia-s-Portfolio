@@ -1,7 +1,7 @@
 import squadMapPoster from "../src/videos/squadmap-poster.png";
 import { FaLinkedin, FaTwitterSquare, FaGithub } from "react-icons/fa";
-import dashboardVideo from "../src/videos/dashboard.mp4";
-import dashboardPoster from "../src/videos/dashboard-poster.jpg";
+import triageVideo from '../src/videos/triage.gif'
+import triagePoster from '../src/videos/triage.png'
 import toukiVideo from "../src/videos/touki.mp4";
 import toukiPoster from "../src/videos/touki-poster.jpg";
 import intellidocVideo from "../src/videos/intellidoc.mp4";
@@ -9,6 +9,29 @@ import intellidocPoster from "../src/videos/intellidoc-poster.jpg";
 import mathStreakGif from "../src/videos/maths-streak.gif";
 
 export const projects = [
+ {
+  title: "Triage",
+  description:
+    "A payment operations dashboard for detecting and managing settlement mismatches, stuck pending payments, and reversed transactions. It uses persistent alerts to track issues from detection through acknowledgement and resolution.",
+  technologies: [
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "Express",
+    "PostgreSQL",
+    "Prisma",
+    "Vitest",
+  ],
+  link: "https://triage-client.vercel.app/",
+  media: {
+    type: "image",
+    src: triageVideo,
+    poster: triagePoster,
+  },
+  githubLink: "https://github.com/Liciacodes/triage-client",
+  caseStudyUrl: 'https://liciacodes.hashnode.dev/how-i-built-triage-a-payment-operations-dashboard-for-managing-transaction-exceptions'
+  
+},
   {
     title: "SquadMap",
     description:
@@ -21,7 +44,7 @@ export const projects = [
       "https://liciacodes.hashnode.dev/how-i-built-squadmap-a-real-time-location-sharing-app-for-events",
   },
   {
-    title: "Intellidoc",
+    title: "IntelliDoc",
     description:
       "An AI-powered document assistant where users can upload PDFs and DOCX files and interact with the content. Using the Groq AI API, it generates summaries, extracts key points and answers questions from the document.",
     technologies: ["React", "Node.js", "Express", "Prisma", "Supabase", "Groq AI API", "JWT"],
@@ -47,15 +70,7 @@ export const projects = [
     media: { type: "image", src: mathStreakGif, poster: mathStreakGif },
     githubLink: "https://github.com/Liciacodes/MathsStreak-client",
   },
-  {
-    title: "Customer and Order Dashboard",
-    description:
-      "This is a responsive Customers and Order dashboard project built with Nextjs, chartjs and TailwindCSS. Data is fetched dynamically and displayed on the charts.",
-    technologies: ["HTML", "CSS", "Javascript", "ReactJS"],
-    link: "https://sample-dashboard-eta.vercel.app/",
-    media: { type: "video", src: dashboardVideo, poster: dashboardPoster },
-    githubLink: "https://github.com/Liciacodes/Customer-and-Order-Dashboard",
-  },
+  
 ];
 
 export const contactLinks = [
