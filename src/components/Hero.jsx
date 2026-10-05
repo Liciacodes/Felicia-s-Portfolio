@@ -6,8 +6,10 @@ import { Barcode, EnvelopeSimple, ClipboardText } from "phosphor-react";
 import CheckedIcon from "./CheckedIcon";
 import { fadeInUp, staggerContainer } from "../lib/motion";
 
+
+
 const HEADING =
-  "👋🏽 I am Felicia, full-time Frontend Engineer, and part-time Pro Swimmer. Currently seeking new challenges...";
+  "👋🏽 I am Felicia, a Frontend Developer and part-time Pro Swimmer. I build full-stack apps with React, TypeScript and Node, and I'm open to remote roles.";
 
 export default function Hero({ scrollToSection }) {
   const [isHovered, setIsHovered] = useState(false);
@@ -32,7 +34,7 @@ export default function Hero({ scrollToSection }) {
     <section className="relative flex flex-col mt-20 md:mt-[148px] w-full px-4 sm:px-4 md:px-8 lg:px-0 sm:max-w-[750px] md:max-w-[950px]">
       <div className="w-full max-w-4xl mx-auto">
         {reduceMotion ? (
-          <h1 className="text-[22px] md:text-[26px] w-full h-full font-normal text-[#592C03] leading-9 md:w-[673px] md:h-[114px]">
+          <h1 className="text-[22px] md:text-[26px] w-full h-full font-normal text-[#592C03] leading-9 md:w-[673px] md:h-auto">
             {HEADING}
           </h1>
         ) : (

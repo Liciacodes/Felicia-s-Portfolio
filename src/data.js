@@ -1,7 +1,9 @@
 import squadMapPoster from "../src/videos/squadmap-poster.png";
 import { FaLinkedin, FaTwitterSquare, FaGithub } from "react-icons/fa";
-import triageVideo from '../src/videos/triage.gif'
-import triagePoster from '../src/videos/triage.png'
+import triageVideo from "../src/videos/triage.gif";
+import triagePoster from "../src/videos/triage.png";
+import flowboardVideo from "../src/videos/flowboard.mp4";
+import flowboardPoster from "../src/videos/flowboard-poster.png";
 import toukiVideo from "../src/videos/touki.mp4";
 import toukiPoster from "../src/videos/touki-poster.jpg";
 import intellidocVideo from "../src/videos/intellidoc.mp4";
@@ -9,29 +11,47 @@ import intellidocPoster from "../src/videos/intellidoc-poster.jpg";
 import mathStreakGif from "../src/videos/maths-streak.gif";
 
 export const projects = [
- {
-  title: "Triage",
-  description:
-    "A payment operations dashboard for detecting and managing settlement mismatches, stuck pending payments, and reversed transactions. It uses persistent alerts to track issues from detection through acknowledgement and resolution.",
-  technologies: [
-    "Next.js",
-    "TypeScript",
-    "Node.js",
-    "Express",
-    "PostgreSQL",
-    "Prisma",
-    "Vitest",
-  ],
-  link: "https://triage-client.vercel.app/",
-  media: {
-    type: "image",
-    src: triageVideo,
-    poster: triagePoster,
+  {
+    title: "Triage",
+    description:
+      "A payment operations dashboard for detecting and managing settlement mismatches, stuck pending payments, and reversed transactions. It uses persistent alerts to track issues from detection through acknowledgement and resolution.",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "Prisma",
+      "Vitest",
+    ],
+    link: "https://triage-client.vercel.app/",
+    media: {
+      type: "image",
+      src: triageVideo,
+      poster: triagePoster,
+    },
+    githubLink: "https://github.com/Liciacodes/triage-client",
+    caseStudyUrl:
+      "https://liciacodes.hashnode.dev/how-i-built-triage-a-payment-operations-dashboard-for-managing-transaction-exceptions",
   },
-  githubLink: "https://github.com/Liciacodes/triage-client",
-  caseStudyUrl: 'https://liciacodes.hashnode.dev/how-i-built-triage-a-payment-operations-dashboard-for-managing-transaction-exceptions'
-  
-},
+  {
+    title: "Flowboard",
+    description:
+      "A visual workflow editor. Build automations on a canvas, validate them, and run them. Every run lights up the path it takes, and each condition explains in plain words why it chose YES or NO.",
+    technologies: [
+      "React",
+      "TypeScript",
+      "React Flow",
+      "Tailwind CSS",
+      "Node.js",
+      "Express",
+      "Prisma",
+      "PostgreSQL",
+    ],
+    link: "https://flowboard-five-tau.vercel.app/",
+    media: { type: "video", src: flowboardVideo, poster: flowboardPoster },
+    githubLink: "https://github.com/Liciacodes/flowboard",
+  },
   {
     title: "SquadMap",
     description:
@@ -47,7 +67,15 @@ export const projects = [
     title: "IntelliDoc",
     description:
       "An AI-powered document assistant where users can upload PDFs and DOCX files and interact with the content. Using the Groq AI API, it generates summaries, extracts key points and answers questions from the document.",
-    technologies: ["React", "Node.js", "Express", "Prisma", "Supabase", "Groq AI API", "JWT"],
+    technologies: [
+      "React",
+      "Node.js",
+      "Express",
+      "Prisma",
+      "Supabase",
+      "Groq AI API",
+      "JWT",
+    ],
     link: "https://intellidocclient.netlify.app/",
     media: { type: "video", src: intellidocVideo, poster: intellidocPoster },
     githubLink: "https://github.com/Liciacodes/intellidoc-client",
@@ -56,7 +84,7 @@ export const projects = [
     title: "Touki Grotesk",
     description:
       "A type specimen website built for Udi Foundry to showcase and sell the Touki Grotesk typeface. Features font previews, interactive glyph explorer, weight and style tester, and a clean editorial layout that reflects the typeface's post-colonial African identity.",
-    technologies: ["Javascript", "ReactJs", "Typescript",'Nextjs'],
+    technologies: ["Javascript", "ReactJs", "Typescript", "Nextjs"],
     link: "https://www.udifoundry.com/fonts/touki-grotesk",
     media: { type: "video", src: toukiVideo, poster: toukiPoster },
     githubLink: "https://github.com/Liciacodes/Udi-Foundry-V1",
@@ -65,12 +93,19 @@ export const projects = [
     title: "MathStreak",
     description:
       "A daily math quiz app. One AI-generated question a day, answer it, build your streak.",
-    technologies: ["React", "TypeScript", "Node.js", "Express", "Prisma", "PostgreSQL", "Groq AI API"],
+    technologies: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "Prisma",
+      "PostgreSQL",
+      "Groq AI API",
+    ],
     link: "https://maths-streak-client.vercel.app/quiz",
     media: { type: "image", src: mathStreakGif, poster: mathStreakGif },
     githubLink: "https://github.com/Liciacodes/MathsStreak-client",
   },
-  
 ];
 
 export const contactLinks = [
@@ -93,4 +128,3 @@ export const contactLinks = [
     icon: FaGithub,
   },
 ];
-
