@@ -1,26 +1,26 @@
 import React, { useState } from "react";
-import { motion, useReducedMotion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Button from "./Button";
 import MagneticButton from "./MagneticButton";
-import { Barcode, EnvelopeSimple, ClipboardText } from "phosphor-react";
+import {
+  Barcode,
+  ClipboardText,
+  DownloadSimple,
+  EnvelopeSimple,
+} from "phosphor-react";
 import CheckedIcon from "./CheckedIcon";
-import { fadeInUp, staggerContainer } from "../lib/motion";
+import { EMAIL, RESUME_URL } from "../data";
+import { fadeIn, fadeInUp, staggerContainer } from "../lib/motion";
 
-
-
-const HEADING =
-  "👋🏽 I am Felicia, a Frontend Developer and part-time Pro Swimmer. I build full-stack apps with React, TypeScript and Node, and I'm open to remote roles.";
+const NAME = "Felicia Udosen";
 
 export default function Hero({ scrollToSection }) {
   const [isHovered, setIsHovered] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
-  const reduceMotion = useReducedMotion();
-
-  const email = "udosenfelicia@gmail.com";
 
   const copyToClipboard = () => {
     navigator.clipboard
-      .writeText(email)
+      .writeText(EMAIL)
       .then(() => {
         setIsCopied(true);
         setTimeout(() => setIsCopied(false), 2000);
@@ -31,68 +31,121 @@ export default function Hero({ scrollToSection }) {
   };
 
   return (
-    <section className="relative flex flex-col mt-20 md:mt-[148px] w-full px-4 sm:px-4 md:px-8 lg:px-0 sm:max-w-[750px] md:max-w-[950px]">
-      <div className="w-full max-w-4xl mx-auto">
-        {reduceMotion ? (
-          <h1 className="text-[22px] md:text-[26px] w-full h-full font-normal text-[#592C03] leading-9 md:w-[673px] md:h-auto">
-            {HEADING}
-          </h1>
-        ) : (
-          <motion.h1
-            className="text-[22px] md:text-[26px] w-full h-full font-normal text-[#592C03] leading-9 md:w-[673px] md:h-auto"
-            variants={staggerContainer(0.035)}
-            initial="hidden"
-            animate="visible"
-          >
-            {HEADING.split(" ").map((word, index) => (
-              <motion.span
-                key={index}
-                variants={fadeInUp}
-                className="inline-block mr-[0.28em]"
-              >
-                {word}
-              </motion.span>
-            ))}
-          </motion.h1>
-        )}
+    <section
+      id="hero"
+      className="relative flex flex-col mt-16 md:mt-[120px] w-full px-4 sm:px-4 md:px-8 lg:px-0 sm:max-w-[750px] md:max-w-[950px]"
+    >
+      <motion.div
+        className="w-full max-w-4xl mx-auto"
+        variants={staggerContainer(0.1)}
+        initial="hidden"
+        animate="visible"
+      >
+        <motion.p
+          variants={fadeInUp}
+          className="inline-flex items-center gap-2 text-[13px] md:text-[14px] text-ink border border-sand/50 bg-sand/10 rounded-full px-3 py-1"
+        >
+          <span className="relative flex h-2 w-2">
+            <span className="absolute inline-flex h-full w-full rounded-full bg-[#138533] opacity-60 animate-ping motion-reduce:animate-none" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-[#138533]" />
+          </span>
+          Open to remote roles
+        </motion.p>
 
-        <div className="flex flex-col md:flex-row mt-8 md:items-center md:gap-x-8 gap-x-0">
+        <motion.h1
+          aria-label={NAME}
+          className="text-[36px] sm:text-[52px] md:text-[68px] font-medium text-ink leading-[1.05] tracking-tight mt-5"
+          variants={staggerContainer(0.04)}
+        >
+          {NAME.split(" ").map((word) => (
+            <span
+              key={word}
+              aria-hidden="true"
+              className="inline-block whitespace-nowrap mr-[0.3em]"
+            >
+              {word.split("").map((char, index) => (
+                <motion.span
+                  key={index}
+                  variants={fadeInUp}
+                  className="inline-block"
+                >
+                  {char}
+                </motion.span>
+              ))}
+            </span>
+          ))}
+        </motion.h1>
+
+        <motion.p
+          variants={fadeInUp}
+          className="text-[18px] md:text-[22px] font-normal text-ink leading-8 md:leading-9 mt-5 md:w-[673px]"
+        >
+          👋🏽 I&apos;m a frontend developer who ships full-stack, and a part-time
+          pro swimmer. For 3+ years I&apos;ve been building web apps with React,
+          TypeScript and Node.
+        </motion.p>
+
+        <motion.div
+          variants={fadeInUp}
+          className="flex flex-col md:flex-row mt-8 md:items-center gap-3 md:gap-x-4"
+        >
           <MagneticButton className="w-full lg:w-[241px]">
             <Button
               label="View Projects"
-              bgColor={"bg-black"}
               Icon={<Barcode size={36} weight="light" />}
-              height="h-[54px]"
               onClick={() => scrollToSection("projects")}
             />
           </MagneticButton>
 
+          <MagneticButton className="w-full lg:w-[241px]">
+            <Button
+              label="Download Resume"
+              variant="outline"
+              Icon={<DownloadSimple size={22} weight="light" />}
+              iconHover="group-hover:translate-y-0.5"
+              href={RESUME_URL}
+              download
+            />
+          </MagneticButton>
+
           <button
-            className="flex items-center justify-between md:justify-start mt-3 md:mt-0 w-full px-0 md:px-4 py-1 md:gap-x-2 text-[#592C03] text-[18px] font-medium"
+            className="flex items-center justify-between md:justify-start w-full md:w-auto px-0 md:px-4 py-1 md:gap-x-2 text-ink text-[18px] font-medium"
             onClick={copyToClipboard}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
-            <span className="text-[18px]">
-              {isCopied ? "Copied!" : "Copy Email"}
-            </span>
-            <span>
-              {isCopied ? (
-                <CheckedIcon />
-              ) : isHovered ? (
-                <ClipboardText size={22} color="#F7861D" weight="light" />
-              ) : (
-                <EnvelopeSimple
-                  size={22}
-                  weight="light"
-                  color="#F7861D"
-                  className="hover:text-black"
-                />
-              )}
-            </span>
+            <AnimatePresence mode="wait" initial={false}>
+              <motion.span
+                key={isCopied ? "copied" : "copy"}
+                variants={fadeIn}
+                initial="hidden"
+                animate="visible"
+                exit="hidden"
+                className="flex items-center justify-between md:justify-start w-full md:gap-x-2 whitespace-nowrap"
+              >
+                <span aria-live="polite">
+                  {isCopied ? "Copied!" : "Copy Email"}
+                </span>
+                {isCopied ? (
+                  <CheckedIcon />
+                ) : isHovered ? (
+                  <ClipboardText
+                    size={22}
+                    weight="light"
+                    className="text-accent"
+                  />
+                ) : (
+                  <EnvelopeSimple
+                    size={22}
+                    weight="light"
+                    className="text-accent"
+                  />
+                )}
+              </motion.span>
+            </AnimatePresence>
           </button>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }

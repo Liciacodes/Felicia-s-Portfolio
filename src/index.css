@@ -22,3 +22,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+:focus-visible {
+  outline: 2px solid #f7861d;
+  outline-offset: 3px;
+}

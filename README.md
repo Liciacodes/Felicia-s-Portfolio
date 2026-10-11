@@ -1,70 +1,68 @@
 # Felicia's Portfolio
 
-Welcome to my portfolio repository! Here you'll find a collection of my projects, showcasing my skills and experience in frontend development. Each project is carefully crafted to demonstrate my proficiency in various technologies, and my ability to solve complex problems with creative solutions.
-
+The source for my portfolio site, [feliciaudosen.com](https://www.feliciaudosen.com). It shows the projects I have built, the articles I have written, and how to reach me.
 
 https://github.com/user-attachments/assets/0d914961-d619-4f64-a2c6-3bd9c04e7d46
 
+## Built with
 
+React, Vite, Tailwind CSS and Framer Motion. Articles are pulled from my Hashnode RSS feed at build time.
+
+## Run it locally
+
+```bash
+npm install
+npm run dev
+```
+
+`npm run build` creates the production build in `dist/`.
 
 ## Projects
 
-### 1. Touki Grotesk Specimen Page
-**Description:** Touki Grotesk is a contemporary grotesque sans inspired by the typographic language of early post-colonial Africa. Developed through research into African visual culture from the mid century. Touki Grotesk draws from a time when cinema print and street signage shaped public identity across the continent. 
+### 1. Flowboard
+A visual workflow editor. Build automations on a canvas, validate them, and run them. Every run lights up the path it takes, and each condition explains in plain words why it chose YES or NO.
 
-**Technologies Used:** HTML, CSS, JavaScript, React, TailwindCSS, Nextjs, Typescript.
+**Technologies:** React, TypeScript, React Flow, Tailwind CSS, Node.js, Express, Prisma, PostgreSQL
 
-**Live Demo:** https://www.udifoundry.com/fonts/touki-grotesk
+**Live:** https://flowboard-five-tau.vercel.app/ · **Code:** https://github.com/Liciacodes/flowboard
 
-**Repository:** https://github.com/Liciacodes/Udi-Foundry-V1
+### 2. Triage
+A payment operations dashboard for detecting and managing settlement mismatches, stuck pending payments, and reversed transactions. Persistent alerts track each issue from detection through acknowledgement and resolution.
 
----
+**Technologies:** Next.js, TypeScript, Node.js, Express, PostgreSQL, Prisma, Vitest
 
-### 2. Onboarding Screen
-**Description:** This is an Onboarding Screen Project It takes you through the process of creating an account which is also know as signing up, logging in by retrieving the user's details from the database and finally having access to the dashboard. I also implemented the google authentication using the google API. LocalStorage served as my default database.
+**Live:** https://triage-client.vercel.app/ · **Code:** https://github.com/Liciacodes/triage-client · [Case study](https://liciacodes.hashnode.dev/how-i-built-triage-a-payment-operations-dashboard-for-managing-transaction-exceptions)
 
-**Technologies Used:** HTML, CSS, JavaScript, React, TailwindCSS.
+### 3. SquadMap
+A real-time, event-based friend finder that helps people find each other on the fly, with a Socket.io layer for live location updates and presence.
 
-**Live Demo:** https://feliciaonboarding-project.netlify.app/
+**Technologies:** React, TypeScript, Node.js, Socket.io
 
-**Repository:** https://github.com/Liciacodes/Onboarding-Screen-Project
+**Live:** https://squad-map-kappa.vercel.app/ · [Case study](https://liciacodes.hashnode.dev/how-i-built-squadmap-a-real-time-location-sharing-app-for-events)
 
----
+### 4. IntelliDoc
+An AI-powered document assistant. Upload PDFs and DOCX files, then get summaries, key points and answers to questions about the document through the Groq AI API.
 
-### 3. Customer and Order Dashboard
-**Description:** This is a responsive Customers and Order dashboard project built with Nextjs, chartjs and TailwindCSS. Data is fetched dynamically and displayed on the charts.
+**Technologies:** React, Node.js, Express, Prisma, Supabase, Groq AI API, JWT
 
-**Technologies Used:** Html, Css, Javascript, TailwindCss, React Charts, Next JS.
+**Live:** https://intellidocclient.netlify.app/ · **Code:** https://github.com/Liciacodes/intellidoc-client
 
-**Live Demo:** https://sample-dashboard-eta.vercel.app/
+### 5. Touki Grotesk
+A type specimen website built for Udi Foundry to showcase and sell the Touki Grotesk typeface, with font previews, an interactive glyph explorer, and a weight and style tester.
 
-**Repository:** https://github.com/Liciacodes/Customer-and-Order-Dashboard
+**Technologies:** Next.js, React, TypeScript, JavaScript
 
----
+**Live:** https://www.udifoundry.com/fonts/touki-grotesk · **Code:** https://github.com/Liciacodes/Udi-Foundry-V1
 
-### 4. Tic Tac Toe
-**Description:**  A classic Tic Tac Toe game built as a web application with an intelligent twist. This interactive game allows two players to take turns marking X's and O's on a 3x3 grid, with the added feature of move suggestions to enhance
+### 6. MathStreak
+A daily maths quiz. One AI-generated question a day; answer it to keep your streak alive.
 
-**Technologies Used:** HTML, CSS, JavaScript, React,Next JS, Styled Components.
+**Technologies:** React, TypeScript, Node.js, Express, Prisma, PostgreSQL, Groq AI API
 
-**Live Demo:** https://connect-4-clone.vercel.app/
-
-**Repository:** https://github.com/Liciacodes/connect-4-clone
-
-## About Me
-
-I am a passionate frontend developer with a strong foundation in web technologies and a keen eye for design. I enjoy creating user-friendly, responsive, and visually appealing interfaces. I am always eager to learn new technologies and improve my skills.
-
-**Portfolio Website:** (https://www.feliciaudosen.com)
+**Live:** https://maths-streak-client.vercel.app/quiz · **Code:** https://github.com/Liciacodes/MathsStreak-client
 
 ## Contact
-
-Feel free to reach out if you have any questions or if you'd like to collaborate on a project!
 
 - **Email:** udosenfelicia@gmail.com
 - **LinkedIn:** https://www.linkedin.com/in/felicia-udosen-74828923a/
 - **GitHub:** https://github.com/Liciacodes/
----
-
-Thank you for visiting my portfolio! 😊
-

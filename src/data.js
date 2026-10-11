@@ -1,39 +1,20 @@
-import squadMapPoster from "../src/videos/squadmap-poster.png";
 import { FaLinkedin, FaTwitterSquare, FaGithub } from "react-icons/fa";
-import triageVideo from "../src/videos/triage.gif";
-import triagePoster from "../src/videos/triage.png";
-import flowboardVideo from "../src/videos/flowboard.mp4";
-import flowboardPoster from "../src/videos/flowboard-poster.png";
-import toukiVideo from "../src/videos/touki.mp4";
-import toukiPoster from "../src/videos/touki-poster.jpg";
-import intellidocVideo from "../src/videos/intellidoc.mp4";
-import intellidocPoster from "../src/videos/intellidoc-poster.jpg";
-import mathStreakGif from "../src/videos/maths-streak.gif";
+import flowboardVideo from "./videos/flowboard.mp4";
+import flowboardPoster from "./videos/flowboard-poster.webp";
+import triageVideo from "./videos/triage.mp4";
+import triagePoster from "./videos/triage-poster.webp";
+import squadMapPoster from "./videos/squadmap-poster.webp";
+import intellidocVideo from "./videos/intellidoc.mp4";
+import intellidocPoster from "./videos/intellidoc-poster.jpg";
+import toukiVideo from "./videos/touki.mp4";
+import toukiPoster from "./videos/touki-poster.jpg";
+import mathStreakVideo from "./videos/maths-streak.mp4";
+import mathStreakPoster from "./videos/maths-streak-poster.webp";
+
+export const EMAIL = "udosenfelicia@gmail.com";
+export const RESUME_URL = "/Felicia_Udosen_Frontend_Developer.pdf";
 
 export const projects = [
-  {
-    title: "Triage",
-    description:
-      "A payment operations dashboard for detecting and managing settlement mismatches, stuck pending payments, and reversed transactions. It uses persistent alerts to track issues from detection through acknowledgement and resolution.",
-    technologies: [
-      "Next.js",
-      "TypeScript",
-      "Node.js",
-      "Express",
-      "PostgreSQL",
-      "Prisma",
-      "Vitest",
-    ],
-    link: "https://triage-client.vercel.app/",
-    media: {
-      type: "image",
-      src: triageVideo,
-      poster: triagePoster,
-    },
-    githubLink: "https://github.com/Liciacodes/triage-client",
-    caseStudyUrl:
-      "https://liciacodes.hashnode.dev/how-i-built-triage-a-payment-operations-dashboard-for-managing-transaction-exceptions",
-  },
   {
     title: "Flowboard",
     description:
@@ -53,13 +34,31 @@ export const projects = [
     githubLink: "https://github.com/Liciacodes/flowboard",
   },
   {
+    title: "Triage",
+    description:
+      "A payment operations dashboard for detecting and managing settlement mismatches, stuck pending payments, and reversed transactions. It uses persistent alerts to track issues from detection through acknowledgement and resolution.",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "Prisma",
+      "Vitest",
+    ],
+    link: "https://triage-client.vercel.app/",
+    media: { type: "video", src: triageVideo, poster: triagePoster },
+    githubLink: "https://github.com/Liciacodes/triage-client",
+    caseStudyUrl:
+      "https://liciacodes.hashnode.dev/how-i-built-triage-a-payment-operations-dashboard-for-managing-transaction-exceptions",
+  },
+  {
     title: "SquadMap",
     description:
       "SquadMap is a real-time, event-based friend finder that helps people find each other on the fly. It uses a Socket.io layer for live location updates and presence.",
     technologies: ["React", "TypeScript", "Node.js", "Socket.io"],
     link: "https://squad-map-kappa.vercel.app/",
-    media: { type: "image", src: squadMapPoster, poster: squadMapPoster },
-    githubLink: "https://github.com/Liciacodes",
+    media: { type: "image", src: squadMapPoster },
     caseStudyUrl:
       "https://liciacodes.hashnode.dev/how-i-built-squadmap-a-real-time-location-sharing-app-for-events",
   },
@@ -84,7 +83,7 @@ export const projects = [
     title: "Touki Grotesk",
     description:
       "A type specimen website built for Udi Foundry to showcase and sell the Touki Grotesk typeface. Features font previews, interactive glyph explorer, weight and style tester, and a clean editorial layout that reflects the typeface's post-colonial African identity.",
-    technologies: ["Javascript", "ReactJs", "Typescript", "Nextjs"],
+    technologies: ["Next.js", "React", "TypeScript", "JavaScript"],
     link: "https://www.udifoundry.com/fonts/touki-grotesk",
     media: { type: "video", src: toukiVideo, poster: toukiPoster },
     githubLink: "https://github.com/Liciacodes/Udi-Foundry-V1",
@@ -92,7 +91,7 @@ export const projects = [
   {
     title: "MathStreak",
     description:
-      "A daily math quiz app. One AI-generated question a day, answer it, build your streak.",
+      "A daily maths quiz. Each day the Groq AI API generates one fresh question; answer it to keep your streak alive. A React and TypeScript client talks to an Express API that stores questions and streaks in PostgreSQL through Prisma.",
     technologies: [
       "React",
       "TypeScript",
@@ -103,27 +102,58 @@ export const projects = [
       "Groq AI API",
     ],
     link: "https://maths-streak-client.vercel.app/quiz",
-    media: { type: "image", src: mathStreakGif, poster: mathStreakGif },
+    media: { type: "video", src: mathStreakVideo, poster: mathStreakPoster },
     githubLink: "https://github.com/Liciacodes/MathsStreak-client",
+  },
+];
+
+export const skillGroups = [
+  {
+    title: "Frontend",
+    skills: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Tailwind CSS",
+      "Redux",
+      "Zustand",
+      "TanStack Query",
+    ],
+  },
+  {
+    title: "Backend & Database",
+    skills: [
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "MongoDB",
+      "Prisma",
+      "Supabase",
+      "REST APIs",
+    ],
+  },
+  {
+    title: "Tools & Testing",
+    skills: ["Git", "GitHub", "Vitest", "Supertest", "Postman"],
   },
 ];
 
 export const contactLinks = [
   {
     href: "https://www.linkedin.com/in/felicia-udosen-74828923a/",
-    iconType: "linkedin",
     text: "Felicia Udosen",
     icon: FaLinkedin,
   },
   {
     href: "https://twitter.com/Liciacodes_",
-    iconType: "xlogo",
     text: "@liciacodes_",
     icon: FaTwitterSquare,
   },
   {
     href: "https://github.com/Liciacodes/",
-    iconType: "github",
     text: "@Liciacodes",
     icon: FaGithub,
   },

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://feliciaudosen.com/sitemap.xml

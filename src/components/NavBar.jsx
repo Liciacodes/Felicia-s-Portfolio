@@ -1,102 +1,159 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import {
+  AnimatePresence,
+  motion,
+  useMotionValueEvent,
+  useScroll,
+  useSpring,
+} from "framer-motion";
 import NavLinks from "./NavLinks";
-import { Browser, BracketsCurly, At, List, X, FileText, NotePencil } from "phosphor-react";
+import {
+  BracketsCurly,
+  At,
+  List,
+  X,
+  NotePencil,
+  Stack,
+} from "phosphor-react";
 import Logo from "./Logo";
+import { fadeIn } from "../lib/motion";
+
+const SECTIONS = [
+  { id: "projects", label: "Work", icon: BracketsCurly },
+  { id: "writing", label: "Writing", icon: NotePencil },
+  { id: "skills", label: "Skills", icon: Stack },
+  { id: "contact", label: "Contact", icon: At },
+];
+
+const TRACKED_IDS = ["hero", ...SECTIONS.map((section) => section.id)];
 
 export default function NavBar({ scrollToSection }) {
-  // Accept scrollToSection as a prop
   const [menuOpen, setMenuOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [activeId, setActiveId] = useState("hero");
+  const { scrollY, scrollYProgress } = useScroll();
+  const progress = useSpring(scrollYProgress, {
+    stiffness: 200,
+    damping: 30,
+    restDelta: 0.001,
+  });
 
-  useEffect(() => {
-    const checkIsMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
+  useMotionValueEvent(scrollY, "change", (y) => {
+    setScrolled(y > 8);
 
-    checkIsMobile();
-    window.addEventListener("resize", checkIsMobile);
-
-    return () => window.removeEventListener("resize", checkIsMobile);
-  }, []);
-
-  useEffect(() => {
-    if (!isMobile && menuOpen) {
-      setMenuOpen(false);
+    const atBottom =
+      window.innerHeight + y >= document.documentElement.scrollHeight - 4;
+    if (atBottom) {
+      setActiveId(TRACKED_IDS[TRACKED_IDS.length - 1]);
+      return;
     }
-  }, [isMobile]);
+
+    const line = window.innerHeight * 0.45;
+    let current = TRACKED_IDS[0];
+    for (const id of TRACKED_IDS) {
+      const el = document.getElementById(id);
+      if (el && el.getBoundingClientRect().top <= line) current = id;
+    }
+    setActiveId(current);
+  });
+
+  useEffect(() => {
+    if (!menuOpen) return;
+    const closeOnEscape = (e) => {
+      if (e.key === "Escape") setMenuOpen(false);
+    };
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, [menuOpen]);
+
+  const goTo = (id) => {
+    scrollToSection(id);
+    setMenuOpen(false);
+  };
+
+  const renderLinks = (underlineId) => (
+    <>
+      {SECTIONS.map(({ id, label, icon }) => (
+        <NavLinks
+          key={id}
+          to={`#${id}`}
+          label={label}
+          icon={icon}
+          active={activeId === id}
+          underlineId={underlineId}
+          onClick={() => goTo(id)}
+        />
+      ))}
+    </>
+  );
 
   return (
     <>
-      <nav className="flex items-end h-[69px] justify-between py-4 md:pt-4 md:px-12 lg:px-16 px-4 sm:px-6 w-full sticky top-0 z-30 bg-white">
-        <div className="flex items-end justify-between w-full md:w-auto">
-          <Logo />
+      <motion.div
+        aria-hidden="true"
+        style={{ scaleX: progress }}
+        className="fixed top-0 inset-x-0 h-[2px] bg-accent origin-left z-50"
+      />
+      <nav
+        className={`sticky top-0 z-30 w-full bg-white border-b transition-colors duration-base ease-signature ${
+          scrolled ? "border-sand/40" : "border-transparent"
+        }`}
+      >
+        <div className="relative z-10 flex items-end justify-between h-[69px] py-4 px-4 sm:px-6 md:px-12 lg:px-16 bg-white">
+          <a
+            href="#hero"
+            aria-label="Felicia Udosen, back to top"
+            onClick={(e) => {
+              e.preventDefault();
+              goTo("hero");
+            }}
+          >
+            <Logo />
+          </a>
 
-          {isMobile && (
-            <button
-              onClick={() => setMenuOpen(!menuOpen)}
-              className="text-2xl md:hidden z-50"
-              aria-label={menuOpen ? "Close menu" : "Open menu"}
-              aria-expanded={menuOpen}
-            >
-              {menuOpen ? (
-                <X size={32} weight="bold" color="#F7861D" />
-              ) : (
-                <List
-                  size={32}
-                  weight="light"
-                  color="#F7861D"
-                  className="font-bold"
-                />
-              )}
-            </button>
+          <div className="hidden md:flex items-center space-x-10">
+            {renderLinks("nav-underline")}
+          </div>
+
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="md:hidden"
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
+          >
+            {menuOpen ? (
+              <X size={32} weight="bold" className="text-accent" />
+            ) : (
+              <List size={32} weight="light" className="text-accent" />
+            )}
+          </button>
+        </div>
+
+        <AnimatePresence>
+          {menuOpen && (
+            <>
+              <motion.div
+                key="backdrop"
+                variants={fadeIn}
+                initial="hidden"
+                animate="visible"
+                exit="hidden"
+                className="fixed inset-0 top-[69px] bg-black/50 md:hidden"
+                onClick={() => setMenuOpen(false)}
+              />
+              <motion.div
+                key="menu"
+                initial={{ opacity: 0, y: -12 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -12 }}
+                transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+                className="absolute top-full inset-x-0 flex flex-col items-center space-y-6 bg-white p-6 shadow-lg md:hidden"
+              >
+                {renderLinks()}
+              </motion.div>
+            </>
           )}
-        </div>
-        {isMobile && menuOpen && (
-          <div
-            className="fixed inset-0 bg-black bg-opacity-50 z-40"
-            onClick={() => setMenuOpen(false)}
-          ></div>
-        )}
-        <div
-          className={`${
-            isMobile
-              ? menuOpen
-                ? "flex fixed top-0 right-0 h-auto max-h-[80vh] w-full space-y-6 md:space-y-0 bg-white p-6 pt-20 shadow-lg overflow-y-auto transform transition-transform duration-300 ease-in-out"
-                : "hidden"
-              : "flex"
-          } flex-col md:flex-row md:flex items-center justify-center md:space-x-10 md:static md:bg-transparent md:p-0 z-40`}
-        >
-          <NavLinks
-            to="#hero"
-            label="Home"
-            icon={Browser}
-            onClick={() => scrollToSection("hero")}
-          />
-          <NavLinks
-            to="#resume"
-            label="Resume"
-            icon={FileText}
-            onClick={() => scrollToSection("resume")}
-          />
-          <NavLinks
-            to="#projects"
-            label="Work"
-            icon={BracketsCurly}
-            onClick={() => scrollToSection("projects")}
-          />
-          <NavLinks
-            to="#writing"
-            label="Writing"
-            icon={NotePencil}
-            onClick={() => scrollToSection("writing")}
-          />
-          <NavLinks
-            to="#contact"
-            label="Contact"
-            icon={At}
-            onClick={() => scrollToSection("contact")}
-          />
-        </div>
+        </AnimatePresence>
       </nav>
     </>
   );

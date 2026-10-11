@@ -1,72 +1,70 @@
-import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
-import { ArrowSquareOut } from "phosphor-react";
+import React, { useEffect, useRef } from "react";
+import { useInView, useReducedMotion } from "framer-motion";
+import { ArrowSquareOut, ArrowUpRight } from "phosphor-react";
 import { projects } from "../data";
 import SectionTitle from "./SectionTitle";
 import MagneticButton from "./MagneticButton";
-import { DURATION, EASE_SIGNATURE } from "../lib/motion";
+import Reveal from "./Reveal";
+import TechPill from "./TechPill";
 
-const TEASER_LENGTH = 100;
-
-const truncate = (text, maxLength) => {
-  if (text.length <= maxLength) return text;
-  const truncated = text.slice(0, maxLength);
-  const lastSentenceEnd = truncated.lastIndexOf(".");
-  if (lastSentenceEnd > maxLength * 0.4) {
-    return text.slice(0, lastSentenceEnd + 1);
-  }
-  return text.substr(0, text.lastIndexOf(" ", maxLength)) + "...";
+// Projects with a case study show only their opening sentence as a teaser.
+const firstSentence = (text) => {
+  const end = text.indexOf(". ");
+  return end === -1 ? text : text.slice(0, end + 1);
 };
 
-function TechPill({ children }) {
+const mediaClass =
+  "w-full h-full object-cover transition-transform duration-base ease-signature group-hover/media:scale-105";
+
+function ProjectVideo({ project }) {
+  const videoRef = useRef(null);
+  const inView = useInView(videoRef, { amount: 0.3 });
+  const reduceMotion = useReducedMotion();
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video || reduceMotion) return;
+    if (inView) {
+      video.play().catch(() => {});
+    } else {
+      video.pause();
+    }
+  }, [inView, reduceMotion]);
+
   return (
-    <span className="text-[12px] lg:text-[13px] font-medium text-ink border border-sand/50 bg-sand/10 rounded-full px-3 py-1 whitespace-nowrap">
-      {children}
-    </span>
+    <video
+      ref={videoRef}
+      src={project.media.src}
+      poster={project.media.poster}
+      aria-label={`${project.title} demo`}
+      className={mediaClass}
+      preload="none"
+      controls={reduceMotion}
+      loop
+      muted
+      playsInline
+    />
   );
 }
 
 function ProjectCard({ project }) {
   const hasCaseStudyLink = Boolean(project.caseStudyUrl);
-  const mediaRef = useRef(null);
-  const mediaInView = useInView(mediaRef, { once: true, margin: "200px" });
 
   return (
-    <motion.div
-      layout
+    <Reveal
+      as="article"
       className="flex flex-col md:flex-row items-stretch gap-4 mb-14 md:gap-x-5 w-full rounded-lg border border-transparent hover:border-accent/30 p-3 -m-3 transition-colors duration-base ease-signature"
     >
       <div className="flex flex-col w-full md:w-[45%]">
         <div className="flex flex-col h-full border border-accent overflow-hidden rounded-md">
-          <div ref={mediaRef} className="h-48 flex-grow overflow-hidden">
+          <div className="group/media h-48 flex-grow overflow-hidden">
             {project.media.type === "video" ? (
-              mediaInView ? (
-                <motion.video
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: DURATION.base, ease: EASE_SIGNATURE }}
-                  src={project.media.src}
-                  poster={project.media.poster}
-                  className="w-full h-full object-cover"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                />
-              ) : (
-                <img
-                  src={project.media.poster}
-                  alt={project.title}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
-              )
+              <ProjectVideo project={project} />
             ) : (
-              <motion.img
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: DURATION.base, ease: EASE_SIGNATURE }}
+              <img
                 src={project.media.src}
-                alt={project.title}
-                className="w-full h-full object-cover"
+                alt={`${project.title} preview`}
+                className={mediaClass}
                 loading="lazy"
               />
             )}
@@ -76,22 +74,27 @@ function ProjectCard({ project }) {
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="block"
+              className="group flex items-center justify-center gap-2 w-full py-4 px-5 text-sm text-white bg-charcoal hover:bg-gradient-to-r from-charcoal to-[#613309] transition-colors duration-base ease-signature"
             >
-              <button className="w-full py-4 px-5 text-sm text-white bg-charcoal hover:bg-gradient-to-r from-charcoal to-[#613309] cursor-pointer transition-colors duration-base ease-signature">
-                View Live Link*
-              </button>
+              View live
+              <ArrowUpRight
+                size={16}
+                weight="bold"
+                className="text-accent transition-transform duration-base ease-signature group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+              />
             </a>
           </MagneticButton>
         </div>
-        <a
-          href={project.githubLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-[#613309] text-sm mt-2 block w-full py-1 px-1 hover:text-accent font-medium transition-colors duration-fast ease-signature"
-        >
-          View on Github
-        </a>
+        {project.githubLink && (
+          <a
+            href={project.githubLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#613309] text-sm mt-2 block w-full py-1 px-1 hover:text-accentText font-medium transition-colors duration-fast ease-signature"
+          >
+            View on Github
+          </a>
+        )}
       </div>
 
       <div className="flex flex-col w-full md:w-[50%] md:mt-0">
@@ -99,7 +102,7 @@ function ProjectCard({ project }) {
 
         <p className="text-ink mt-2">
           {hasCaseStudyLink
-            ? truncate(project.description, TEASER_LENGTH)
+            ? firstSentence(project.description)
             : project.description}
         </p>
 
@@ -121,18 +124,21 @@ function ProjectCard({ project }) {
           </a>
         )}
       </div>
-    </motion.div>
+    </Reveal>
   );
 }
 
 function Projects() {
   return (
-    <section className="mt-20 md:mt-[148px] flex flex-col items-center px-4 sm:px-6 lg:px-0 w-full">
+    <section
+      id="projects"
+      className="mt-20 md:mt-[148px] scroll-mt-24 flex flex-col items-center px-4 sm:px-6 lg:px-0 w-full"
+    >
       <div className="w-full max-w-4xl mx-auto">
         <SectionTitle title={"Projects "} projectNumber={projects.length} />
 
-        {projects.map((project, index) => (
-          <ProjectCard key={index} project={project} />
+        {projects.map((project) => (
+          <ProjectCard key={project.title} project={project} />
         ))}
       </div>
     </section>

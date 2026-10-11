@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
+import { motion } from "framer-motion";
+import { springSnappy } from "../lib/motion";
 
-function NavLinks({ to, label, icon: Icon, onClick }) {
-  const [isHovered, setIsHovered] = useState(false);
+function NavLinks({ to, label, icon: Icon, onClick, active, underlineId }) {
   return (
     <a
       href={to}
@@ -9,9 +10,8 @@ function NavLinks({ to, label, icon: Icon, onClick }) {
         e.preventDefault();
         onClick();
       }}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      className="flex items-center space-x-2 text-[#592C03] hover:text-[#592C03] "
+      aria-current={active ? "true" : undefined}
+      className="group relative flex items-center space-x-2 text-ink"
     >
       <span className="text-lg">{label}</span>
       {Icon && (
@@ -19,8 +19,15 @@ function NavLinks({ to, label, icon: Icon, onClick }) {
           size={22}
           weight="light"
           className={`${
-            isHovered ? "text-[#592C03]" : "text-[#F7861D]"
-          } transition-colors duration-base ease-signature mt-[-7px]`}
+            active ? "text-ink" : "text-accent"
+          } group-hover:text-ink transition-colors duration-base ease-signature mt-[-7px]`}
+        />
+      )}
+      {active && (
+        <motion.span
+          layoutId={underlineId}
+          transition={springSnappy}
+          className="absolute -bottom-1 left-0 right-0 h-[2px] bg-accent"
         />
       )}
     </a>
