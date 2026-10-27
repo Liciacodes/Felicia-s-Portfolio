@@ -1,4 +1,6 @@
 import { FaLinkedin, FaTwitterSquare, FaGithub } from "react-icons/fa";
+import reviewPalVideo from "./videos/reviewpal.mp4";
+import reviewPalPoster from "./videos/reviewpal-poster.webp";
 import flowboardVideo from "./videos/flowboard.mp4";
 import flowboardPoster from "./videos/flowboard-poster.webp";
 import triageVideo from "./videos/triage.mp4";
@@ -15,6 +17,26 @@ export const EMAIL = "udosenfelicia@gmail.com";
 export const RESUME_URL = "/Felicia_Udosen_Frontend_Developer.pdf";
 
 export const projects = [
+  {
+    title: "ReviewPal",
+    description:
+      "An AI code reviewer for GitHub. Open a pull request and ReviewPal comments on the exact lines that have bugs, risks or style issues. A dashboard shows every review and lets you rate each comment as useful or not.",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "Prisma",
+      "GitHub App",
+      "Groq AI",
+      "Vitest",
+    ],
+    link: "https://reviewpal.vercel.app",
+    media: { type: "video", src: reviewPalVideo, poster: reviewPalPoster },
+    githubLink: "https://github.com/Liciacodes/reviewpal",
+    caseStudyUrl: "https://github.com/Liciacodes/reviewpal#readme",
+  },
   {
     title: "Flowboard",
     description:
