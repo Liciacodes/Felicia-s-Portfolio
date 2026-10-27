@@ -1,11 +1,12 @@
 import React, { useEffect, useRef } from "react";
-import { useInView, useReducedMotion } from "framer-motion";
+import { motion, useInView, useReducedMotion } from "framer-motion";
 import { ArrowSquareOut, ArrowUpRight } from "phosphor-react";
 import { projects } from "../data";
 import SectionTitle from "./SectionTitle";
 import MagneticButton from "./MagneticButton";
 import Reveal from "./Reveal";
 import TechPill from "./TechPill";
+import { fadeInLeft, fadeInUp, staggerContainer } from "../lib/motion";
 
 // Projects with a case study show only their opening sentence as a teaser.
 const firstSentence = (text) => {
@@ -53,9 +54,13 @@ function ProjectCard({ project }) {
   return (
     <Reveal
       as="article"
-      className="flex flex-col md:flex-row items-stretch gap-4 mb-14 md:gap-x-5 w-full rounded-lg border border-transparent hover:border-accent/30 p-3 -m-3 transition-colors duration-base ease-signature"
+      variants={staggerContainer(0.06)}
+      className="group/card flex flex-col md:flex-row items-stretch gap-4 mb-14 md:gap-x-5 w-full rounded-lg border border-transparent hover:border-accent/30 [@media(hover:hover)]:hover:-translate-y-0.5 [@media(hover:hover)]:hover:shadow-[0_10px_30px_-14px_rgba(247,134,29,0.45)] p-3 -m-3 transition-[transform,box-shadow,border-color] duration-[250ms] ease-signature"
     >
-      <div className="flex flex-col w-full md:w-[45%]">
+      <motion.div
+        variants={fadeInLeft}
+        className="flex flex-col w-full md:w-[45%]"
+      >
         <div className="flex flex-col h-full border border-accent overflow-hidden rounded-md">
           <div className="group/media h-48 flex-grow overflow-hidden">
             {project.media.type === "video" ? (
@@ -95,9 +100,12 @@ function ProjectCard({ project }) {
             View on Github
           </a>
         )}
-      </div>
+      </motion.div>
 
-      <div className="flex flex-col w-full md:w-[50%] md:mt-0">
+      <motion.div
+        variants={fadeInUp}
+        className="flex flex-col w-full md:w-[50%] md:mt-0"
+      >
         <h3 className="text-[26px] text-ink font-medium">{project.title}</h3>
 
         <p className="text-ink mt-2">
@@ -123,7 +131,7 @@ function ProjectCard({ project }) {
             <ArrowSquareOut size={16} weight="bold" />
           </a>
         )}
-      </div>
+      </motion.div>
     </Reveal>
   );
 }

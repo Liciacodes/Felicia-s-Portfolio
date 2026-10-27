@@ -9,6 +9,7 @@ import {
   EnvelopeSimple,
 } from "phosphor-react";
 import CheckedIcon from "./CheckedIcon";
+import DecodeText from "./DecodeText";
 import { EMAIL, RESUME_URL } from "../data";
 import { fadeIn, fadeInUp, staggerContainer } from "../lib/motion";
 
@@ -17,12 +18,15 @@ const NAME = "Felicia Udosen";
 export default function Hero({ scrollToSection }) {
   const [isHovered, setIsHovered] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
+  // The label only decodes after the first copy, not on page load.
+  const [hasCopied, setHasCopied] = useState(false);
 
   const copyToClipboard = () => {
     navigator.clipboard
       .writeText(EMAIL)
       .then(() => {
         setIsCopied(true);
+        setHasCopied(true);
         setTimeout(() => setIsCopied(false), 2000);
       })
       .catch((err) => {
@@ -114,35 +118,40 @@ export default function Hero({ scrollToSection }) {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
-            <AnimatePresence mode="wait" initial={false}>
-              <motion.span
-                key={isCopied ? "copied" : "copy"}
-                variants={fadeIn}
-                initial="hidden"
-                animate="visible"
-                exit="hidden"
-                className="flex items-center justify-between md:justify-start w-full md:gap-x-2 whitespace-nowrap"
-              >
-                <span aria-live="polite">
-                  {isCopied ? "Copied!" : "Copy Email"}
-                </span>
-                {isCopied ? (
-                  <CheckedIcon />
-                ) : isHovered ? (
-                  <ClipboardText
-                    size={22}
-                    weight="light"
-                    className="text-accent"
-                  />
-                ) : (
-                  <EnvelopeSimple
-                    size={22}
-                    weight="light"
-                    className="text-accent"
-                  />
-                )}
-              </motion.span>
-            </AnimatePresence>
+            <span className="flex items-center justify-between md:justify-start w-full md:gap-x-2 whitespace-nowrap">
+              <span aria-live="polite">
+                <DecodeText
+                  text={isCopied ? "Copied!" : "Copy Email"}
+                  play={hasCopied}
+                />
+              </span>
+              <AnimatePresence mode="wait" initial={false}>
+                <motion.span
+                  key={isCopied ? "copied" : "copy"}
+                  variants={fadeIn}
+                  initial="hidden"
+                  animate="visible"
+                  exit="hidden"
+                  className="flex"
+                >
+                  {isCopied ? (
+                    <CheckedIcon />
+                  ) : isHovered ? (
+                    <ClipboardText
+                      size={22}
+                      weight="light"
+                      className="text-accent"
+                    />
+                  ) : (
+                    <EnvelopeSimple
+                      size={22}
+                      weight="light"
+                      className="text-accent"
+                    />
+                  )}
+                </motion.span>
+              </AnimatePresence>
+            </span>
           </button>
         </motion.div>
       </motion.div>
